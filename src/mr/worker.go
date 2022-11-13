@@ -1,10 +1,16 @@
 package mr
 
-import "fmt"
-import "log"
-import "net/rpc"
-import "hash/fnv"
-
+import (
+    "fmt"
+    "log"
+    "net/rpc"
+    "hash/fnv"
+    "os"
+    "io/ioutil"
+    "encoding/json"
+    "sort"
+    "time"
+)
 
 //
 // Map functions return a slice of KeyValue.
@@ -24,47 +30,111 @@ func ihash(key string) int {
 	return int(h.Sum32() & 0x7fffffff)
 }
 
+func readFileContent(filename string) string {
+    file, _ := os.Open(filename)
+    content, _ := ioutil.ReadAll(file)
+    file.Close()
+    return string(content)
+}
+
+func doMap(filename string, taskId int, nReduce int, mapf func(string, string) []KeyValue) {
+    kva := mapf(filename, readFileContent(filename))
+
+    tempfiles := make([]*os.File, nReduce)
+    encoders := make([]*json.Encoder, nReduce)
+    for i := 0; i < nReduce; i++ {
+        tempfiles[i], _ = ioutil.TempFile("", "")
+        encoders[i] = json.NewEncoder(tempfiles[i])
+    }
+
+    for _, o := range kva {
+        id := ihash(o.Key) % nReduce
+        encoders[id].Encode(&o)
+    }
+
+    for i := range tempfiles {
+        tempfiles[i].Close()
+        name := fmt.Sprintf("mr-%d-%d", taskId, i)
+        os.Rename(tempfiles[i].Name(), name)
+    }
+
+    args := &SubmitTaskArgs{}
+    args.TaskName = "map"
+    args.TaskId = taskId
+    call("Coordinator.SubmitTask", args, &SubmitTaskReply{})
+}
+
+func doReduce (taskId int, nMap int, reducef func (string, []string) string) {
+    kva := []KeyValue{}
+
+    for i := 0; i < nMap; i++ {
+        filename := fmt.Sprintf("mr-%d-%d", i, taskId)
+        file, _ := os.Open(filename)
+        decoder := json.NewDecoder(file)
+
+        for {
+            var kv KeyValue
+            if err := decoder.Decode(&kv); err != nil {
+                break
+            }
+            kva = append(kva, kv)
+        }
+
+        file.Close()
+    }
+
+    sort.Slice(kva, func(i, j int) bool {
+        return kva[i].Key < kva[j].Key
+    })
+
+    tempfile, _ := ioutil.TempFile("", "")
+
+    i := 0
+    for i < len(kva) {
+        values := []string{}
+        values = append(values, kva[i].Value)
+
+        j := i + 1
+        for j < len(kva) && kva[j].Key == kva[i].Key {
+            values = append(values, kva[j].Value)
+            j++
+        }
+
+        fmt.Fprintf(tempfile, "%v %v\n", kva[i].Key, reducef(kva[i].Key, values))
+
+        i = j
+    }
+
+    tempfile.Close()
+    name := fmt.Sprintf("mr-out-%d", taskId)
+    os.Rename(tempfile.Name(), name)
+
+    args := &SubmitTaskArgs{}
+    args.TaskName = "reduce"
+    args.TaskId = taskId
+    call("Coordinator.SubmitTask", args, &SubmitTaskReply{})
+}
 
 //
 // main/mrworker.go calls this function.
 //
-func Worker(mapf func(string, string) []KeyValue,
-	reducef func(string, []string) string) {
-
+func Worker(mapf func(string, string) []KeyValue, reducef func(string, []string) string) {
 	// Your worker implementation here.
+    for {
+        args := &GetTaskArgs{}
+        reply := &GetTaskReply{}
+        call("Coordinator.GetTask", args, reply)
 
-	// uncomment to send the Example RPC to the coordinator.
-	// CallExample()
-
-}
-
-//
-// example function to show how to make an RPC call to the coordinator.
-//
-// the RPC argument and reply types are defined in rpc.go.
-//
-func CallExample() {
-
-	// declare an argument structure.
-	args := ExampleArgs{}
-
-	// fill in the argument(s).
-	args.X = 99
-
-	// declare a reply structure.
-	reply := ExampleReply{}
-
-	// send the RPC request, wait for the reply.
-	// the "Coordinator.Example" tells the
-	// receiving server that we'd like to call
-	// the Example() method of struct Coordinator.
-	ok := call("Coordinator.Example", &args, &reply)
-	if ok {
-		// reply.Y should be 100.
-		fmt.Printf("reply.Y %v\n", reply.Y)
-	} else {
-		fmt.Printf("call failed!\n")
-	}
+        if reply.TaskName == "map" {
+            doMap(reply.MapFilename, reply.TaskId, reply.NReduce, mapf)
+        } else if reply.TaskName == "reduce" {
+            doReduce(reply.TaskId, reply.NMap, reducef)
+        } else if reply.TaskName == "sleep" {
+            time.Sleep(time.Second)
+        } else if reply.TaskName == "finish" {
+            os.Exit(1)
+        }
+    }
 }
 
 //
@@ -89,3 +159,4 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 	fmt.Println(err)
 	return false
 }
+

@@ -14,13 +14,23 @@ import "strconv"
 // and reply for an RPC.
 //
 
-type ExampleArgs struct {
-	X int
+type GetTaskArgs struct {}
+
+// map reduce finish
+type GetTaskReply struct {
+	TaskName string
+    TaskId int
+    MapFilename string
+    NMap int
+    NReduce int
 }
 
-type ExampleReply struct {
-	Y int
+type SubmitTaskArgs struct {
+    TaskName string
+    TaskId int
 }
+
+type SubmitTaskReply struct {}
 
 // Add your RPC definitions here.
 
@@ -34,3 +44,4 @@ func coordinatorSock() string {
 	s += strconv.Itoa(os.Getuid())
 	return s
 }
+
