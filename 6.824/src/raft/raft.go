@@ -49,6 +49,10 @@ type ApplyMsg struct {
 	SnapshotIndex int
 }
 
+type LogEntry struct {
+
+}
+
 //
 // A Go object implementing a single Raft peer.
 //
@@ -141,6 +145,10 @@ func (rf *Raft) Snapshot(index int, snapshot []byte) {
 //
 type RequestVoteArgs struct {
 	// Your data here (2A, 2B).
+    Term int
+    CandidateId int
+    LastLogIndex int
+    LastLogTerm int
 }
 
 //
@@ -149,6 +157,8 @@ type RequestVoteArgs struct {
 //
 type RequestVoteReply struct {
 	// Your data here (2A).
+    Term int
+    voteGranted bool
 }
 
 //
@@ -156,6 +166,23 @@ type RequestVoteReply struct {
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 	// Your code here (2A, 2B).
+}
+
+type AppendEntriesArgs struct {
+    Term int
+    LeaderId int
+    PrevLogTerm int
+    Entries []LogEntry
+    LeaderCommit int
+}
+
+type AppendEntriesReply struct {
+    Term int
+    Success bool
+}
+
+func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply) {
+
 }
 
 //

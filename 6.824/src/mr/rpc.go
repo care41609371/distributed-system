@@ -18,7 +18,7 @@ type GetTaskArgs struct {}
 
 // map reduce finish
 type GetTaskReply struct {
-	TaskName string
+    TaskName string
     TaskId int
     MapFilename string
     NMap int
@@ -40,8 +40,8 @@ type SubmitTaskReply struct {}
 // Can't use the current directory since
 // Athena AFS doesn't support UNIX-domain sockets.
 func coordinatorSock() string {
-	s := "/var/tmp/824-mr-"
-	s += strconv.Itoa(os.Getuid())
-	return s
+    s := "/var/tmp/824-mr-"
+    s += strconv.Itoa(os.Getuid())
+    return s
 }
 
