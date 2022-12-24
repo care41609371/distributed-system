@@ -5,7 +5,7 @@ import (
     "math/rand"
 )
 
-const electionTimeout = 1 * time.Second
+const electionTimeout = 800 * time.Millisecond
 
 func (rf *Raft) setElectionTimeL() {
     t := time.Now()
@@ -25,9 +25,9 @@ func (rf *Raft) becomeLeaderL() {
     Debug("%v in term %v become leader ------------\n", rf.me, rf.currentTerm)
     rf.state = LEADER
     for i := 0; i < len(rf.nextIndex); i++ {
-        rf.nextIndex[i] = len(rf.log)
+        rf.nextIndex[i] = rf.log.lastIndex() + 1
     }
-    rf.sendAppendsL(true)
+    rf.sendAppendsL()
 }
 
 func (rf *Raft) collectVote(server int, args *RequestVoteArgs, votes *int) {
@@ -38,7 +38,6 @@ func (rf *Raft) collectVote(server int, args *RequestVoteArgs, votes *int) {
         rf.mu.Lock()
         if reply.VoteGranted {
             *votes++
-            Debug("%v receive %v vote in term %v   totol votes : %v\n", rf.me, server, rf.currentTerm, *votes)
             if *votes > len(rf.peers) / 2 && rf.state == CANDIDATE && rf.currentTerm == args.Term {
                 rf.becomeLeaderL()
             }
@@ -51,16 +50,15 @@ func (rf *Raft) collectVote(server int, args *RequestVoteArgs, votes *int) {
 }
 
 func (rf *Raft) startElectionL() {
+    Debug("%v start election!\n", rf.me)
     votes := 1
     rf.state = CANDIDATE
     rf.votedFor = rf.me
     rf.currentTerm++
 
     args := &RequestVoteArgs{rf.currentTerm, rf.me, 0, 0}
-    if len(rf.log) > 0 {
-        args.LastLogIndex = len(rf.log) - 1
-        args.LastLogTerm = rf.log[len(rf.log) - 1].Term
-    }
+    args.LastLogIndex = rf.log.lastIndex()
+    args.LastLogTerm = rf.log.at(rf.log.lastIndex()).Term
 
     for i := 0; i < len(rf.peers); i++ {
         if i != rf.me {
@@ -79,12 +77,11 @@ func (rf *Raft) ticker() {
 
         if rf.state == LEADER {
             rf.setElectionTimeL()
-            rf.sendAppendsL(true)
+            rf.sendAppendsL()
         }
 
         if time.Now().After(rf.electionTime) {
             rf.setElectionTimeL()
-            Debug("%v in term %v start eletion\n", rf.me, rf.currentTerm + 1)
             rf.startElectionL()
         }
 

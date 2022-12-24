@@ -75,7 +75,7 @@ type Raft struct {
     // Persistent state on all servers
     currentTerm int
     votedFor int
-    log []LogEntry
+    log logEntry
 
     // Volatile state on all servers:
     commitIndex int
@@ -142,6 +142,7 @@ func Make(peers []*labrpc.ClientEnd, me int, persister *Persister, applyCh chan 
     rf.applyCond = sync.NewCond(&rf.mu)
     rf.electionTime = time.Now()
     rf.setElectionTimeL()
+    rf.log = makeLog()
     // Your initialization code here (2A, 2B, 2C).
 
     // initialize from state persisted before a crash
@@ -149,6 +150,7 @@ func Make(peers []*labrpc.ClientEnd, me int, persister *Persister, applyCh chan 
 
     // start ticker goroutine to start elections
     go rf.ticker()
+    go rf.applier()
 
     return rf
 }

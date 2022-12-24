@@ -40,10 +40,8 @@ func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
 
     myLastLogIndex := 0
     myLastLogTerm := 0
-    if len(rf.log) > 0 {
-        myLastLogIndex = len(rf.log) - 1
-        myLastLogTerm = rf.log[len(rf.log) - 1].Term
-    }
+    myLastLogIndex = rf.log.lastIndex()
+    myLastLogTerm = rf.log.at(rf.log.lastIndex()).Term
 
     uptodate := args.LastLogTerm > myLastLogTerm || (args.LastLogTerm == myLastLogTerm && args.LastLogIndex >= myLastLogIndex)
     if (rf.votedFor == -1 || rf.votedFor == args.CandidateId) && uptodate {
