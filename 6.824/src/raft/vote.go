@@ -5,7 +5,6 @@ package raft
 // field names must start with capital letters!
 //
 type RequestVoteArgs struct {
-    // Your data here (2A, 2B).
     Term int
     CandidateId int
     LastLogIndex int
@@ -17,7 +16,6 @@ type RequestVoteArgs struct {
 // field names must start with capital letters!
 //
 type RequestVoteReply struct {
-    // Your data here (2A).
     Term int
     VoteGranted bool
 }
@@ -26,30 +24,30 @@ type RequestVoteReply struct {
 // example RequestVote RPC handler.
 //
 func (rf *Raft) RequestVote(args *RequestVoteArgs, reply *RequestVoteReply) {
-    // Your code here (2A, 2B).
-    reply.VoteGranted = false
-    reply.Term = rf.currentTerm
-
     rf.mu.Lock()
     defer rf.mu.Unlock()
 
-    if args.Term > rf.currentTerm {
-        rf.becomeFollowerL(args.Term)
-        rf.setElectionTimeL()
+    reply.VoteGranted = false
+    if args.Term < rf.currentTerm {
+        reply.Term = rf.currentTerm
+        return
     }
 
-    myLastLogIndex := 0
-    myLastLogTerm := 0
-    myLastLogIndex = rf.log.lastIndex()
-    myLastLogTerm = rf.log.at(rf.log.lastIndex()).Term
+    if args.Term > rf.currentTerm {
+        rf.becomeFollowerL(args.Term)
+    }
 
+    myLastLogIndex := rf.log.lastIndex()
+    myLastLogTerm := rf.log.at(rf.log.lastIndex()).Term
     uptodate := args.LastLogTerm > myLastLogTerm || (args.LastLogTerm == myLastLogTerm && args.LastLogIndex >= myLastLogIndex)
+
     if (rf.votedFor == -1 || rf.votedFor == args.CandidateId) && uptodate {
         rf.votedFor = args.CandidateId
         reply.VoteGranted = true
+        rf.persist()
         rf.setElectionTimeL()
     }
-    // Debug("%v give a vote to %v in term %v\n", rf.me, args.CandidateId, rf.currentTerm)
+    reply.Term = rf.currentTerm
 }
 
 //

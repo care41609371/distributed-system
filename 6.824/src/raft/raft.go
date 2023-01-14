@@ -40,7 +40,6 @@ type ApplyMsg struct {
     Command      interface{}
     CommandIndex int
 
-    // For 2D:
     SnapshotValid bool
     Snapshot      []byte
     SnapshotTerm  int
@@ -68,7 +67,6 @@ type Raft struct {
 
     applyCh chan ApplyMsg
     applyCond *sync.Cond
-    // Your data here (2A, 2B, 2C).
     // Look at the paper's Figure 2 for a description of what
     // state a Raft server must maintain.
 
@@ -84,6 +82,11 @@ type Raft struct {
     // Volatile state on leaders:
     nextIndex []int
     matchIndex []int
+
+    // information at the end of the truncated log by snapshot
+    waitingSnapshotIndex int
+    waitingSnapshotTerm int
+    waitingSnapshot []byte
 }
 
 // return currentTerm and whether this server
@@ -91,10 +94,7 @@ type Raft struct {
 func (rf *Raft) GetState() (int, bool) {
     rf.mu.Lock()
     defer rf.mu.Unlock()
-
-    term := rf.currentTerm
-    isleader := rf.state == LEADER
-    return term, isleader
+    return rf.currentTerm, rf.state == LEADER
 }
 
 //
@@ -110,7 +110,6 @@ func (rf *Raft) GetState() (int, bool) {
 //
 func (rf *Raft) Kill() {
     atomic.StoreInt32(&rf.dead, 1)
-    // Your code here, if desired.
 }
 
 func (rf *Raft) killed() bool {
@@ -143,7 +142,11 @@ func Make(peers []*labrpc.ClientEnd, me int, persister *Persister, applyCh chan 
     rf.electionTime = time.Now()
     rf.setElectionTimeL()
     rf.log = makeLog()
-    // Your initialization code here (2A, 2B, 2C).
+    rf.waitingSnapshot = nil
+
+    for i := 0; i < len(rf.peers); i++ {
+        rf.nextIndex[i] = rf.log.lastIndex() + 1
+    }
 
     // initialize from state persisted before a crash
     rf.readPersist(persister.ReadRaftState())

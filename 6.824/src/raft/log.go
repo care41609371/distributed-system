@@ -1,51 +1,80 @@
 package raft
 
+import "reflect"
+
 type Entry struct {
     Term int
     Command interface{}
 }
 
 type logEntry struct {
-    entries []Entry
-    index0 int
+    Entries []Entry
+    LastIncludedIndex int
+    LastIncludedTerm int
 }
 
 func makeLog() logEntry {
     l := logEntry{}
-    l.index0 = 0
-    l.entries = make([]Entry, 1)
-    l.entries[0] = Entry{0, nil}
+    l.LastIncludedIndex = 0
+    l.LastIncludedTerm = 0
+    l.Entries = []Entry{}
     return l
 }
 
-func (l *logEntry) firstIndex() int {
-    return l.index0
+func (l *logEntry) lastIndex() int {
+    return l.LastIncludedIndex + len(l.Entries)
 }
 
-func (l *logEntry) lastIndex() int {
-    return l.index0 + len(l.entries) - 1
+func (l *logEntry) rebuild(snapshotIndex, snapshotTerm int) {
+    if snapshotIndex >= l.lastIndex() {
+        l.Entries = []Entry{}
+        l.LastIncludedIndex = snapshotIndex
+        l.LastIncludedTerm = snapshotTerm
+    } else {
+        l.Entries = l.Entries[snapshotIndex - l.LastIncludedIndex : ]
+        l.LastIncludedIndex = snapshotIndex
+        l.LastIncludedTerm = snapshotTerm
+    }
 }
 
 func (l *logEntry) at(index int) *Entry {
-    index -= l.index0
-    if index >= l.firstIndex() && index <= l.lastIndex() {
-       return &l.entries[index]
+    if index > l.LastIncludedIndex && index <= l.lastIndex() {
+       return &l.Entries[index - l.LastIncludedIndex - 1]
+    } else if index == l.LastIncludedIndex {
+        return &Entry{l.LastIncludedTerm, nil}
     } else {
-        return &Entry{-1, nil}
+        panic("log index out of bound!\n")
     }
+}
+
+func (l *logEntry) cutBack(index int) {
+    if index > l.lastIndex() {
+        return
+    }
+    l.Entries = l.Entries[ : index - l.LastIncludedIndex - 1]
 }
 
 func (l *logEntry) append(prevLogIndex int, es ...Entry) {
-    for i, j := prevLogIndex + 1, 0; j < len(es); j++ {
-        if i <= l.lastIndex() {
-            l.entries[i - l.index0] = es[j]
-        } else {
-            l.entries = append(l.entries, es[j])
+    ok := true
+
+    if prevLogIndex + len(es) <= l.lastIndex() {
+        for i, j := prevLogIndex + 1, 0; ; i++ {
+            if i > prevLogIndex + len(es) {
+                ok = false
+                break
+            }
+            if !reflect.DeepEqual(l.Entries[i - l.LastIncludedIndex - 1], es[j]) {
+                break
+            }
         }
-        i++
+    }
+
+    if ok {
+        l.cutBack(prevLogIndex + 1)
+        l.Entries = append(l.Entries, es...)
     }
 }
 
-func (l *logEntry) slice(begin int, end int) []Entry {
-    return l.entries[begin - l.index0 : end - l.index0]
+func (l *logEntry) slice(begin int) []Entry {
+    return l.Entries[begin - l.LastIncludedIndex - 1 : ]
 }

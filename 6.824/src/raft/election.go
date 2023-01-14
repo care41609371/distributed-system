@@ -5,7 +5,7 @@ import (
     "math/rand"
 )
 
-const electionTimeout = 800 * time.Millisecond
+const electionTimeout = 1000 * time.Millisecond
 
 func (rf *Raft) setElectionTimeL() {
     t := time.Now()
@@ -19,13 +19,14 @@ func (rf *Raft) becomeFollowerL(term int) {
     rf.state = FOLLOWER
     rf.currentTerm = term
     rf.votedFor = -1
+    rf.persist()
 }
 
 func (rf *Raft) becomeLeaderL() {
-    Debug("%v in term %v become leader ------------\n", rf.me, rf.currentTerm)
     rf.state = LEADER
     for i := 0; i < len(rf.nextIndex); i++ {
         rf.nextIndex[i] = rf.log.lastIndex() + 1
+        rf.matchIndex[i] = 0
     }
     rf.sendAppendsL()
 }
@@ -36,6 +37,10 @@ func (rf *Raft) collectVote(server int, args *RequestVoteArgs, votes *int) {
 
     if ok {
         rf.mu.Lock()
+        if reply.Term < args.Term {
+            rf.mu.Unlock()
+            return
+        }
         if reply.VoteGranted {
             *votes++
             if *votes > len(rf.peers) / 2 && rf.state == CANDIDATE && rf.currentTerm == args.Term {
@@ -50,15 +55,18 @@ func (rf *Raft) collectVote(server int, args *RequestVoteArgs, votes *int) {
 }
 
 func (rf *Raft) startElectionL() {
-    Debug("%v start election!\n", rf.me)
     votes := 1
     rf.state = CANDIDATE
     rf.votedFor = rf.me
     rf.currentTerm++
+    rf.persist()
 
-    args := &RequestVoteArgs{rf.currentTerm, rf.me, 0, 0}
-    args.LastLogIndex = rf.log.lastIndex()
-    args.LastLogTerm = rf.log.at(rf.log.lastIndex()).Term
+    args := &RequestVoteArgs{
+        rf.currentTerm,
+        rf.me,
+        rf.log.lastIndex(),
+        rf.log.at(rf.log.lastIndex()).Term,
+    }
 
     for i := 0; i < len(rf.peers); i++ {
         if i != rf.me {
@@ -76,16 +84,13 @@ func (rf *Raft) ticker() {
         rf.mu.Lock()
 
         if rf.state == LEADER {
-            rf.setElectionTimeL()
             rf.sendAppendsL()
-        }
-
-        if time.Now().After(rf.electionTime) {
+        } else if time.Now().After(rf.electionTime) {
             rf.setElectionTimeL()
             rf.startElectionL()
         }
 
         rf.mu.Unlock()
-        time.Sleep(50 * time.Millisecond)
+        time.Sleep(40 * time.Millisecond)
     }
 }

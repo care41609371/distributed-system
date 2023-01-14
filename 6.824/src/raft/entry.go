@@ -11,6 +11,8 @@ type AppendEntriesArgs struct {
 
 type AppendEntriesReply struct {
     Term int
+    ConflictTerm int
+    ConflictIndex int
     Success bool
 }
 
@@ -18,35 +20,50 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
     rf.mu.Lock()
     defer rf.mu.Unlock()
 
-    reply.Term = rf.currentTerm
-
     if args.Term < rf.currentTerm {
+        reply.Term = rf.currentTerm
         reply.Success = false
         return
     }
 
-    if rf.state != FOLLOWER {
+    if rf.currentTerm < args.Term {
         rf.becomeFollowerL(args.Term)
     }
 
     rf.setElectionTimeL()
+    reply.Term = rf.currentTerm
+
+    if args.PrevLogIndex > rf.log.lastIndex() {
+        reply.Success = false
+        reply.ConflictTerm = -1
+        reply.ConflictIndex = rf.log.lastIndex() + 1
+        return
+    }
+
     if rf.log.at(args.PrevLogIndex).Term != args.PrevLogTerm {
         reply.Success = false
+        reply.ConflictTerm = rf.log.at(args.PrevLogIndex).Term
+
+        index := args.PrevLogIndex
+        for index > rf.log.LastIncludedIndex && rf.log.at(index).Term == reply.ConflictTerm {
+            index--
+        }
+        reply.ConflictIndex = index + 1
+
+        rf.log.cutBack(args.PrevLogIndex)
+
         return
     }
 
     if len(args.Entries) > 0 {
-        Debug("%v reveive entries index %v - %v\n", rf.me, args.PrevLogIndex + 1, args.PrevLogIndex + len(args.Entries))
         rf.log.append(args.PrevLogIndex, args.Entries...)
+        rf.persist()
     }
 
     if args.LeaderCommit > rf.commitIndex {
-        rf.commitIndex = args.LeaderCommit
+        rf.commitIndex = min(args.LeaderCommit, rf.log.lastIndex())
+        rf.applyCond.Broadcast()
     }
-    if rf.commitIndex > rf.log.lastIndex() {
-        rf.commitIndex = rf.log.lastIndex()
-    }
-    rf.applyCond.Broadcast()
 
     reply.Success = true
 }
@@ -70,7 +87,6 @@ func (rf *Raft) leaderCommitL() {
         }
 
         if count > len(rf.peers) / 2 {
-            Debug("%v mojority\n", count)
             rf.commitIndex = i
         }
     }
@@ -87,22 +103,41 @@ func (rf *Raft) processAppendReply(args *AppendEntriesArgs, reply *AppendEntries
         return
     }
 
+    if args.Term != rf.currentTerm {
+        return
+    }
+
     if rf.state != LEADER {
         return
     }
 
     if reply.Success {
-        rf.nextIndex[server] = args.PrevLogIndex + len(args.Entries) + 1
-        rf.matchIndex[server] = args.PrevLogIndex + len(args.Entries)
+        rf.nextIndex[server] = max(rf.nextIndex[server], args.PrevLogIndex + len(args.Entries) + 1)
+        rf.matchIndex[server] = max(rf.matchIndex[server], args.PrevLogIndex + len(args.Entries))
         rf.leaderCommitL()
     } else {
-        rf.nextIndex[server]--
-        index := rf.nextIndex[server]
-        for index > rf.log.firstIndex() && rf.log.at(index - 1).Term != reply.Term {
-            index--
+        if rf.nextIndex[server] != args.PrevLogIndex + 1 {
+            return
         }
-        if rf.nextIndex[server] > index {
-            rf.nextIndex[server] = index
+
+        rf.nextIndex[server]--
+
+        if reply.ConflictTerm != -1 {
+            index := -1
+            for i := reply.ConflictIndex; i > rf.log.LastIncludedIndex; i-- {
+                if rf.log.at(i).Term == reply.ConflictTerm {
+                    index = i
+                    break
+                }
+            }
+
+            if index == -1 {
+                rf.nextIndex[server] = reply.ConflictIndex
+            } else {
+                rf.nextIndex[server] = index
+            }
+        } else {
+            rf.nextIndex[server] = reply.ConflictIndex
         }
     }
 }
@@ -110,17 +145,31 @@ func (rf *Raft) processAppendReply(args *AppendEntriesArgs, reply *AppendEntries
 func (rf *Raft) sendAppend(server int) {
     rf.mu.Lock()
 
-    next := rf.nextIndex[server]
-    args := &AppendEntriesArgs{}
-    args.Term = rf.currentTerm
-    args.LeaderId = rf.me
-    if rf.nextIndex[server] <= rf.log.lastIndex() {
-        args.Entries = make([]Entry, rf.log.lastIndex() + 1 - next)
-        copy(args.Entries, rf.log.slice(next, rf.log.lastIndex() + 1))
+    if rf.state != LEADER {
+        rf.mu.Unlock()
+        return
     }
-    args.LeaderCommit = rf.commitIndex
-    args.PrevLogIndex = next - 1
-    args.PrevLogTerm = rf.log.at(next - 1).Term
+
+    next := min(rf.nextIndex[server], rf.log.lastIndex() + 1)
+
+    if next <= rf.log.LastIncludedIndex {
+        rf.mu.Unlock()
+        rf.sendSnapshot(server)
+        return
+    }
+
+    args := &AppendEntriesArgs{
+        Term : rf.currentTerm,
+        LeaderId : rf.me,
+        LeaderCommit : rf.commitIndex,
+        PrevLogIndex : next - 1,
+        PrevLogTerm : rf.log.at(next - 1).Term,
+    }
+
+    if next <= rf.log.lastIndex() {
+        args.Entries = make([]Entry, rf.log.lastIndex() + 1 - next)
+        copy(args.Entries, rf.log.slice(next))
+    }
 
     rf.mu.Unlock()
 
@@ -162,27 +211,44 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
         return -1, rf.currentTerm, false
     }
 
-    Debug("leader receive entry\n")
     e := Entry{rf.currentTerm, command}
     rf.log.append(rf.log.lastIndex(), e)
-    // rf.sendAppendsL(false)
+    rf.persist()
 
     return rf.log.lastIndex(), rf.currentTerm, true
 }
 
 func (rf *Raft) applier() {
     rf.mu.Lock()
+
+    rf.lastApplied = max(rf.lastApplied, rf.log.LastIncludedIndex)
+    rf.commitIndex = max(rf.commitIndex, rf.log.LastIncludedIndex)
+
     for !rf.killed() {
-        if rf.lastApplied + 1 <= rf.commitIndex && rf.lastApplied + 1 <= rf.log.lastIndex() {
-            rf.lastApplied++
-            am := ApplyMsg{}
-            am.CommandValid = true
-            am.Command = rf.log.at(rf.lastApplied).Command
-            am.CommandIndex = rf.lastApplied
+        if rf.waitingSnapshot != nil {
+            am := ApplyMsg{
+                SnapshotValid : true,
+                CommandValid : false,
+                Snapshot : rf.waitingSnapshot,
+                SnapshotTerm : rf.waitingSnapshotTerm,
+                SnapshotIndex : rf.waitingSnapshotIndex,
+            }
+            rf.waitingSnapshot = nil
+
             rf.mu.Unlock()
             rf.applyCh <- am
             rf.mu.Lock()
-            Debug("%v applied %v\n", rf.me, rf.lastApplied)
+        } else if rf.lastApplied + 1 <= rf.commitIndex && rf.lastApplied + 1 <= rf.log.lastIndex() {
+            rf.lastApplied++
+            am := ApplyMsg{
+                CommandValid : true,
+                Command : rf.log.at(rf.lastApplied).Command,
+                CommandIndex : rf.lastApplied,
+            }
+
+            rf.mu.Unlock()
+            rf.applyCh <- am
+            rf.mu.Lock()
         } else {
             rf.applyCond.Wait()
         }
