@@ -30,6 +30,7 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
         rf.becomeFollowerL(args.Term)
     }
 
+    rf.setElectionTimeL()
     reply.Term = rf.currentTerm
 
     if args.LastIncludedIndex <= rf.log.LastIncludedIndex {

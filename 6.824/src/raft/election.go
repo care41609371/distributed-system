@@ -91,6 +91,6 @@ func (rf *Raft) ticker() {
         }
 
         rf.mu.Unlock()
-        time.Sleep(40 * time.Millisecond)
+        time.Sleep(50 * time.Millisecond)
     }
 }
