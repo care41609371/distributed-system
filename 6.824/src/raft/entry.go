@@ -33,6 +33,13 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
     rf.setElectionTimeL()
     reply.Term = rf.currentTerm
 
+    if args.PrevLogIndex < rf.log.LastIncludedIndex {
+        reply.Success = false
+        reply.ConflictTerm = -1
+        reply.ConflictIndex = -1
+        return
+    }
+
     if args.PrevLogIndex > rf.log.lastIndex() {
         reply.Success = false
         reply.ConflictTerm = -1
@@ -51,12 +58,16 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
         reply.ConflictIndex = index + 1
 
         rf.log.cutBack(args.PrevLogIndex)
+        if rf.commitIndex > rf.log.lastIndex() {
+            rf.commitIndex = rf.log.lastIndex()
+        }
 
         return
     }
 
     if len(args.Entries) > 0 {
         rf.log.append(args.PrevLogIndex, args.Entries...)
+        DPrintf("[entry] %v %v", rf.me, rf.log.lastIndex())
         rf.persist()
     }
 
@@ -98,16 +109,16 @@ func (rf *Raft) processAppendReply(args *AppendEntriesArgs, reply *AppendEntries
     rf.mu.Lock()
     defer rf.mu.Unlock()
 
-    if rf.currentTerm < reply.Term {
-        rf.becomeFollowerL(reply.Term)
-        return
-    }
-
     if args.Term != rf.currentTerm {
         return
     }
 
     if rf.state != LEADER {
+        return
+    }
+
+    if rf.currentTerm < reply.Term {
+        rf.becomeFollowerL(reply.Term)
         return
     }
 
@@ -119,8 +130,6 @@ func (rf *Raft) processAppendReply(args *AppendEntriesArgs, reply *AppendEntries
         if rf.nextIndex[server] != args.PrevLogIndex + 1 {
             return
         }
-
-        rf.nextIndex[server]--
 
         if reply.ConflictTerm != -1 {
             index := -1
@@ -137,7 +146,9 @@ func (rf *Raft) processAppendReply(args *AppendEntriesArgs, reply *AppendEntries
                 rf.nextIndex[server] = index
             }
         } else {
-            rf.nextIndex[server] = reply.ConflictIndex
+            if reply.ConflictIndex != -1 {
+                rf.nextIndex[server] = reply.ConflictIndex
+            }
         }
     }
 }
@@ -157,6 +168,7 @@ func (rf *Raft) sendAppend(server int) {
         rf.sendSnapshot(server)
         return
     }
+
 
     args := &AppendEntriesArgs{
         Term : rf.currentTerm,
@@ -214,18 +226,33 @@ func (rf *Raft) Start(command interface{}) (int, int, bool) {
     e := Entry{rf.currentTerm, command}
     rf.log.append(rf.log.lastIndex(), e)
     rf.persist()
+    rf.sendAppendsL()
 
     return rf.log.lastIndex(), rf.currentTerm, true
 }
 
 func (rf *Raft) applier() {
     rf.mu.Lock()
+    defer rf.mu.Unlock()
 
     rf.lastApplied = max(rf.lastApplied, rf.log.LastIncludedIndex)
     rf.commitIndex = max(rf.commitIndex, rf.log.LastIncludedIndex)
 
     for !rf.killed() {
-        if rf.waitingSnapshot != nil {
+        if rf.lastApplied + 1 <= rf.commitIndex && rf.lastApplied + 1 <= rf.log.lastIndex() {
+            rf.lastApplied++
+            am := ApplyMsg{
+                CommandValid : true,
+                Command : rf.log.at(rf.lastApplied).Command,
+                CommandIndex : rf.lastApplied,
+            }
+
+            DPrintf("[apply command] %v index:%v\n", rf.me, rf.lastApplied)
+
+            rf.mu.Unlock()
+            rf.applyCh <- am
+            rf.mu.Lock()
+        } else if rf.waitingSnapshot != nil {
             am := ApplyMsg{
                 SnapshotValid : true,
                 CommandValid : false,
@@ -235,16 +262,7 @@ func (rf *Raft) applier() {
             }
             rf.waitingSnapshot = nil
 
-            rf.mu.Unlock()
-            rf.applyCh <- am
-            rf.mu.Lock()
-        } else if rf.lastApplied + 1 <= rf.commitIndex && rf.lastApplied + 1 <= rf.log.lastIndex() {
-            rf.lastApplied++
-            am := ApplyMsg{
-                CommandValid : true,
-                Command : rf.log.at(rf.lastApplied).Command,
-                CommandIndex : rf.lastApplied,
-            }
+            DPrintf("[apply snapshot] %v index:%v\n", rf.me, am.SnapshotIndex)
 
             rf.mu.Unlock()
             rf.applyCh <- am

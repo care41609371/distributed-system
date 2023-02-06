@@ -1,0 +1,1437 @@
+1 Leader
+19:42:39.515023 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:0 PrevLogIndex:0 Entries:[] LeaderCommit:0}
+19:42:39.515165 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:0 PrevLogIndex:0 Entries:[] LeaderCommit:0}
+19:42:39.562584 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:0 PrevLogIndex:0 Entries:[] LeaderCommit:0}
+19:42:39.562685 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:0 PrevLogIndex:0 Entries:[] LeaderCommit:0}
+19:42:39.564545 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:0 PrevLogIndex:0 Entries:[] LeaderCommit:0}
+19:42:39.564617 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:0 PrevLogIndex:0 Entries:[] LeaderCommit:0}
+19:42:39.567870 [entry] 0 1
+19:42:39.568016 [apply command] 1 index:1
+19:42:39.582820 [entry] 2 1
+19:42:39.612959 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.613059 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.623603 [apply command] 0 index:1
+19:42:39.631371 [apply command] 2 index:1
+19:42:39.662728 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.662804 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.712859 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.712998 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.762944 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.763013 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.813019 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.813077 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.863104 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.863161 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.913186 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.913247 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.963279 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:39.963351 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.013398 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.013480 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.063477 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.063512 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.113602 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.113677 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.163726 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.163801 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.200803 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.200876 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.214069 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.214158 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:1}
+19:42:40.224177 [entry] 0 2
+19:42:40.224354 [apply command] 1 index:2
+19:42:40.240523 [entry] 0 2
+19:42:40.264192 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.264295 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.282559 [apply command] 0 index:2
+19:42:40.303965 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304085 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.304150 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304209 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.304278 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304356 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.304442 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304523 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.304593 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304675 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.304744 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304817 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.304909 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.304978 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.305058 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.305150 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.305220 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.305290 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.306003 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.306388 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:1 Entries:[] LeaderCommit:2}
+19:42:40.308222 [entry] 0 17
+19:42:40.308556 [entry] 0 17
+19:42:40.309076 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:2 Entries:[] LeaderCommit:2}
+19:42:40.309740 [entry] 0 17
+19:42:40.309966 [entry] 0 17
+19:42:40.310104 [apply command] 1 index:3
+19:42:40.310110 [apply command] 1 index:4
+19:42:40.310127 [apply command] 1 index:5
+19:42:40.310131 [apply command] 1 index:6
+19:42:40.310136 [apply command] 1 index:7
+19:42:40.310140 [apply command] 1 index:8
+19:42:40.310145 [apply command] 1 index:9
+19:42:40.310149 [apply command] 1 index:10
+19:42:40.310285 [apply command] 1 index:11
+19:42:40.310291 [apply command] 1 index:12
+19:42:40.310296 [apply command] 1 index:13
+19:42:40.310300 [apply command] 1 index:14
+19:42:40.310307 [apply command] 1 index:15
+19:42:40.310310 [apply command] 1 index:16
+19:42:40.310315 [apply command] 1 index:17
+19:42:40.310666 [send snapshot] to:2 next:2 9-17 
+19:42:40.310778 [send snapshot] to:2 next:2 9-17 
+19:42:40.310831 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:17 Entries:[] LeaderCommit:17}
+19:42:40.310876 [send snapshot] to:2 next:2 9-17 
+19:42:40.310923 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:17 Entries:[] LeaderCommit:17}
+19:42:40.310995 [send snapshot] to:2 next:2 9-17 
+19:42:40.311055 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:17 Entries:[] LeaderCommit:17}
+19:42:40.311099 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:17 Entries:[] LeaderCommit:17}
+19:42:40.311133 [send snapshot] to:2 next:2 9-17 
+19:42:40.313656 [apply command] 0 index:3
+19:42:40.313684 [apply command] 0 index:4
+19:42:40.313691 [apply command] 0 index:5
+19:42:40.313708 [apply command] 0 index:6
+19:42:40.313714 [apply command] 0 index:7
+19:42:40.313717 [apply command] 0 index:8
+19:42:40.313722 [apply command] 0 index:9
+19:42:40.313726 [apply command] 0 index:10
+19:42:40.313822 [apply command] 0 index:11
+19:42:40.313828 [apply command] 0 index:12
+19:42:40.313833 [apply command] 0 index:13
+19:42:40.313836 [apply command] 0 index:14
+19:42:40.313846 [apply command] 0 index:15
+19:42:40.313850 [apply command] 0 index:16
+19:42:40.313855 [apply command] 0 index:17
+19:42:40.314785 [send snapshot] to:2 next:2 9-17 
+19:42:40.314847 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:17 Entries:[] LeaderCommit:17}
+19:42:40.325296 [send snapshot] to:2 next:2 9-18 
+19:42:40.325471 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:17 Entries:[] LeaderCommit:17}
+19:42:40.342814 [entry] 0 18
+19:42:40.343494 [apply command] 1 index:18
+19:42:40.366359 [send snapshot] to:2 next:2 9-18 
+19:42:40.366453 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.378744 [apply command] 0 index:18
+19:42:40.387112 [rpc snapshot] 9 commitIndex:0
+19:42:40.387251 2 next:10
+19:42:40.387270 [apply snapshot] 2 index:9
+19:42:40.387286 [snapshot installed success] 2
+19:42:40.417082 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:9 Entries:[] LeaderCommit:18}
+19:42:40.417179 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.439596 [entry] 2 18
+19:42:40.439823 [apply command] 2 index:10
+19:42:40.439869 [apply command] 2 index:11
+19:42:40.439878 [apply command] 2 index:12
+19:42:40.439882 [apply command] 2 index:13
+19:42:40.439890 [apply command] 2 index:14
+19:42:40.439894 [apply command] 2 index:15
+19:42:40.439899 [apply command] 2 index:16
+19:42:40.439903 [apply command] 2 index:17
+19:42:40.439908 [apply command] 2 index:18
+19:42:40.467334 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.467422 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.518039 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.518090 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.568150 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.568228 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.618213 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.618291 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.668331 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.668412 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.719348 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.719417 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.769696 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.769781 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.819755 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.819823 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.869845 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.869914 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.919935 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.920037 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.970016 [send command] to 2 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:40.970123 [send command] to 0 &{Term:1 LeaderId:1 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.097557 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.097632 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.101716 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.101782 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.127137 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.127224 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:1 PrevLogIndex:18 Entries:[] LeaderCommit:18}
+19:42:43.128021 [entry] 2 19
+19:42:43.128170 [apply command] 0 index:19
+19:42:43.149459 [entry] 2 19
+19:42:43.177265 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:19 Entries:[] LeaderCommit:19}
+19:42:43.177326 [send snapshot] to:1 next:19 19-19 
+19:42:43.191544 [apply command] 2 index:19
+19:42:43.202306 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:19 Entries:[] LeaderCommit:19}
+19:42:43.202385 [send snapshot] to:1 next:19 19-20 
+19:42:43.227358 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:19 Entries:[] LeaderCommit:19}
+19:42:43.227436 [send snapshot] to:1 next:19 19-20 
+19:42:43.237848 [entry] 2 20
+19:42:43.237993 [apply command] 0 index:20
+19:42:43.277484 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:20 Entries:[] LeaderCommit:20}
+19:42:43.277546 [send snapshot] to:1 next:19 19-20 
+19:42:43.286126 [apply command] 2 index:20
+19:42:43.303179 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:20 Entries:[] LeaderCommit:20}
+19:42:43.303226 [send snapshot] to:1 next:19 19-21 
+19:42:43.315459 [entry] 2 21
+19:42:43.315597 [apply command] 0 index:21
+19:42:43.319517 [rpc snapshot] 19 commitIndex:9
+19:42:43.319598 1 next:20
+19:42:43.319615 [apply snapshot] 1 index:19
+19:42:43.319621 [snapshot installed success] 1
+19:42:43.327582 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.327856 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:19 Entries:[] LeaderCommit:21}
+19:42:43.327894 [apply command] 2 index:21
+19:42:43.347155 [entry] 1 21
+19:42:43.347280 [apply command] 1 index:20
+19:42:43.347288 [apply command] 1 index:21
+19:42:43.377672 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.377747 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.427960 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.428048 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.478061 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.478133 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.528164 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.528239 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.578265 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.578326 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.628365 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.628437 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.678472 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.678545 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.728756 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.728837 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.779054 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.779124 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.829157 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.829223 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.866869 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.866943 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:21}
+19:42:43.871453 [entry] 2 22
+19:42:43.871614 [apply command] 0 index:22
+19:42:43.879255 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.879345 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.900670 [apply command] 2 index:22
+19:42:43.908374 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.908447 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.908506 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.908577 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.908644 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.908694 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.908751 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.908801 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.908866 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.908916 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.908970 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.909031 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.909084 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:22 Entries:[] LeaderCommit:22}
+19:42:43.909142 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:21 Entries:[] LeaderCommit:22}
+19:42:43.913556 [entry] 2 29
+19:42:43.913707 [apply command] 0 index:23
+19:42:43.913717 [apply command] 0 index:24
+19:42:43.913724 [apply command] 0 index:25
+19:42:43.913732 [apply command] 0 index:26
+19:42:43.913744 [apply command] 0 index:27
+19:42:43.913751 [apply command] 0 index:28
+19:42:43.913770 [apply command] 0 index:29
+19:42:43.923266 [entry] 2 29
+19:42:43.929340 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:29}
+19:42:43.929391 [send snapshot] to:1 next:22 29-29 
+19:42:43.929977 [entry] 2 29
+19:42:43.932977 [entry] 2 29
+19:42:43.933124 [entry] 2 29
+19:42:43.950714 [apply command] 2 index:23
+19:42:43.950726 [apply command] 2 index:24
+19:42:43.950731 [apply command] 2 index:25
+19:42:43.950734 [apply command] 2 index:26
+19:42:43.950740 [apply command] 2 index:27
+19:42:43.950743 [apply command] 2 index:28
+19:42:43.950747 [apply command] 2 index:29
+19:42:43.969030 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:29}
+19:42:43.969083 [send snapshot] to:1 next:22 29-30 
+19:42:43.974340 [rpc snapshot] 29 commitIndex:19
+19:42:43.974539 1 next:30
+19:42:43.974561 [apply snapshot] 1 index:29
+19:42:43.974633 [snapshot installed success] 1
+19:42:43.980280 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:29}
+19:42:43.980364 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:29}
+19:42:43.982579 [entry] 2 30
+19:42:43.986297 [entry] 2 30
+19:42:43.986907 [apply command] 0 index:30
+19:42:43.993242 [entry] 1 30
+19:42:44.030453 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.030515 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:30}
+19:42:44.037211 [entry] 1 30
+19:42:44.037281 [apply command] 1 index:30
+19:42:44.080731 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.080810 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:30}
+19:42:44.088064 [apply command] 2 index:30
+19:42:44.130823 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.130883 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:29 Entries:[] LeaderCommit:30}
+19:42:44.136185 [entry] 1 30
+19:42:44.180928 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.180996 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.231008 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.231826 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.281108 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.281161 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.331212 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.331278 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.381310 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.381389 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.431383 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.431465 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.481490 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.481554 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.532081 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.532132 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.550746 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.550825 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:30}
+19:42:44.561608 [entry] 2 31
+19:42:44.561738 [apply command] 0 index:31
+19:42:44.582613 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.582722 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.608282 [apply command] 2 index:31
+19:42:44.611678 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.611710 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.611763 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.611828 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.611887 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.611962 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612018 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612057 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612122 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612178 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612226 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612290 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612360 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612461 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612532 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612586 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612630 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612686 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612741 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612778 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612820 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612861 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:31 Entries:[] LeaderCommit:31}
+19:42:44.612916 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.612960 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:30 Entries:[] LeaderCommit:31}
+19:42:44.614889 [entry] 2 43
+19:42:44.615060 [apply command] 0 index:32
+19:42:44.615074 [apply command] 0 index:33
+19:42:44.615086 [apply command] 0 index:34
+19:42:44.615092 [apply command] 0 index:35
+19:42:44.615096 [apply command] 0 index:36
+19:42:44.615115 [apply command] 0 index:37
+19:42:44.615121 [apply command] 0 index:38
+19:42:44.615124 [apply command] 0 index:39
+19:42:44.615247 [apply command] 0 index:40
+19:42:44.615253 [apply command] 0 index:41
+19:42:44.615258 [apply command] 0 index:42
+19:42:44.615262 [apply command] 0 index:43
+19:42:44.615329 [entry] 2 43
+19:42:44.616190 [entry] 2 43
+19:42:44.619858 [entry] 2 43
+19:42:44.620950 [entry] 2 43
+19:42:44.623489 [entry] 2 43
+19:42:44.626206 [entry] 2 43
+19:42:44.632691 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:43 Entries:[] LeaderCommit:43}
+19:42:44.632807 [send snapshot] to:1 next:31 39-43 
+19:42:44.632943 [apply command] 2 index:32
+19:42:44.632948 [apply command] 2 index:33
+19:42:44.632953 [apply command] 2 index:34
+19:42:44.632956 [apply command] 2 index:35
+19:42:44.632960 [apply command] 2 index:36
+19:42:44.632977 [apply command] 2 index:37
+19:42:44.632984 [apply command] 2 index:38
+19:42:44.632987 [apply command] 2 index:39
+19:42:44.633057 [apply command] 2 index:40
+19:42:44.633061 [apply command] 2 index:41
+19:42:44.633065 [apply command] 2 index:42
+19:42:44.633068 [apply command] 2 index:43
+19:42:44.652917 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:43 Entries:[] LeaderCommit:43}
+19:42:44.652974 [send snapshot] to:1 next:31 39-44 
+19:42:44.655144 [entry] 2 44
+19:42:44.655375 [apply command] 0 index:44
+19:42:44.660280 [rpc snapshot] 39 commitIndex:29
+19:42:44.660428 [apply snapshot] 1 index:39
+19:42:44.660518 1 next:40
+19:42:44.660523 [snapshot installed success] 1
+19:42:44.682800 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.682892 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:39 Entries:[] LeaderCommit:44}
+19:42:44.701233 [entry] 1 44
+19:42:44.701417 [apply command] 1 index:40
+19:42:44.701425 [apply command] 1 index:41
+19:42:44.701439 [apply command] 1 index:42
+19:42:44.701443 [apply command] 1 index:43
+19:42:44.701449 [apply command] 1 index:44
+19:42:44.702112 [apply command] 2 index:44
+19:42:44.733218 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.733269 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.783336 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.783417 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.833459 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.833556 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.884226 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.884837 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.934246 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.934380 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.984363 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:44.984428 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:45.034480 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:45.034572 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:45.084563 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:45.084626 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:45.134684 [send command] to 2 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:45.134767 [send command] to 1 &{Term:3 LeaderId:0 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:47.214750 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:47.214812 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:47.230642 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:47.230736 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:44}
+19:42:47.238047 [entry] 1 45
+19:42:47.238203 [apply command] 2 index:45
+19:42:47.255471 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:45 Entries:[] LeaderCommit:45}
+19:42:47.255564 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:45}
+19:42:47.260875 [apply command] 1 index:45
+19:42:47.271248 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:45 Entries:[] LeaderCommit:45}
+19:42:47.271317 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:45}
+19:42:47.281588 [entry] 1 46
+19:42:47.281715 [apply command] 2 index:46
+19:42:47.305579 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:46}
+19:42:47.305650 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:46}
+19:42:47.324006 [apply command] 1 index:46
+19:42:47.331896 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:46}
+19:42:47.331965 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:3 PrevLogIndex:44 Entries:[] LeaderCommit:46}
+19:42:47.347641 [entry] 1 47
+19:42:47.353242 [entry] 0 47
+19:42:47.353347 [apply command] 2 index:47
+19:42:47.353364 [apply command] 0 index:40
+19:42:47.353367 [apply command] 0 index:41
+19:42:47.353373 [apply command] 0 index:42
+19:42:47.353375 [apply command] 0 index:43
+19:42:47.353379 [apply command] 0 index:44
+19:42:47.353382 [apply command] 0 index:45
+19:42:47.353386 [apply command] 0 index:46
+19:42:47.355677 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:47}
+19:42:47.355776 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.379095 [apply command] 0 index:47
+19:42:47.379981 [entry] 1 47
+19:42:47.380054 [apply command] 1 index:47
+19:42:47.405761 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:47}
+19:42:47.405820 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.455863 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:47}
+19:42:47.455938 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.464309 [entry] 1 47
+19:42:47.506103 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:47}
+19:42:47.506178 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.511376 [entry] 1 47
+19:42:47.556362 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:46 Entries:[] LeaderCommit:47}
+19:42:47.556467 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.578190 [entry] 1 47
+19:42:47.606462 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.606525 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.656579 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.656611 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.708612 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.708692 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.758688 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.758726 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.808785 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.808858 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.858857 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.858930 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.908977 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.909047 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.934154 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.934213 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:47}
+19:42:47.939440 [entry] 1 48
+19:42:47.939597 [apply command] 2 index:48
+19:42:47.959073 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:47.959153 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.009181 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:48.009261 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.017575 [apply command] 1 index:48
+19:42:48.035100 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:48.035157 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:48.035283 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:48.035329 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.035393 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:48.035438 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.035483 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.035518 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.035570 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:47 Entries:[] LeaderCommit:48}
+19:42:48.035607 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:48 Entries:[] LeaderCommit:48}
+19:42:48.035774 [entry] 1 57
+19:42:48.035872 [apply command] 2 index:49
+19:42:48.035877 [apply command] 2 index:50
+19:42:48.035979 [apply command] 2 index:51
+19:42:48.035985 [apply command] 2 index:52
+19:42:48.036001 [apply command] 2 index:53
+19:42:48.036006 [apply command] 2 index:54
+19:42:48.036012 [apply command] 2 index:55
+19:42:48.036016 [apply command] 2 index:56
+19:42:48.036021 [apply command] 2 index:57
+19:42:48.036029 [send snapshot] to:0 next:48 49-57 
+19:42:48.036089 [send snapshot] to:0 next:48 49-57 
+19:42:48.036142 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:57 Entries:[] LeaderCommit:57}
+19:42:48.036187 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:57 Entries:[] LeaderCommit:57}
+19:42:48.036220 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:57 Entries:[] LeaderCommit:57}
+19:42:48.036248 [send snapshot] to:0 next:48 49-57 
+19:42:48.036300 [send snapshot] to:0 next:48 49-57 
+19:42:48.036348 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:57 Entries:[] LeaderCommit:57}
+19:42:48.038567 [entry] 1 57
+19:42:48.045465 [entry] 1 57
+19:42:48.046654 [entry] 1 57
+19:42:48.052389 [entry] 1 57
+19:42:48.053460 [apply command] 1 index:49
+19:42:48.053469 [apply command] 1 index:50
+19:42:48.053546 [apply command] 1 index:51
+19:42:48.053557 [apply command] 1 index:52
+19:42:48.053574 [apply command] 1 index:53
+19:42:48.053578 [apply command] 1 index:54
+19:42:48.053590 [apply command] 1 index:55
+19:42:48.053596 [apply command] 1 index:56
+19:42:48.053601 [apply command] 1 index:57
+19:42:48.055830 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:57 Entries:[] LeaderCommit:57}
+19:42:48.055907 [send snapshot] to:0 next:48 49-58 
+19:42:48.059196 [rpc snapshot] 49 commitIndex:39
+19:42:48.059244 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:57 Entries:[] LeaderCommit:57}
+19:42:48.059298 0 next:50
+19:42:48.059314 [apply snapshot] 0 index:49
+19:42:48.059324 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:49 Entries:[] LeaderCommit:57}
+19:42:48.059332 [snapshot installed success] 0
+19:42:48.066508 [entry] 1 58
+19:42:48.066665 [apply command] 2 index:58
+19:42:48.076065 [entry] 1 58
+19:42:48.084708 [entry] 0 58
+19:42:48.085208 [apply command] 0 index:50
+19:42:48.085218 [apply command] 0 index:51
+19:42:48.085226 [apply command] 0 index:52
+19:42:48.085230 [apply command] 0 index:53
+19:42:48.085249 [apply command] 0 index:54
+19:42:48.085253 [apply command] 0 index:55
+19:42:48.085259 [apply command] 0 index:56
+19:42:48.085268 [apply command] 0 index:57
+19:42:48.109329 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.109387 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.112685 [apply command] 1 index:58
+19:42:48.115932 [apply command] 0 index:58
+19:42:48.159403 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.159674 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.209490 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.209542 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.259618 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.259718 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.309721 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.309797 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.359812 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.359876 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.409909 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.410925 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.460004 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.460071 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.510131 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.510200 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.560230 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.560309 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.608176 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.608236 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.610536 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:58 Entries:[] LeaderCommit:58}
+19:42:48.610683 [entry] 1 59
+19:42:48.610774 [apply command] 2 index:59
+19:42:48.610882 [send snapshot] to:0 next:59 59-59 
+19:42:48.632472 [entry] 1 59
+19:42:48.660661 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.660709 [send snapshot] to:0 next:59 59-59 
+19:42:48.677999 [apply command] 1 index:59
+19:42:48.688735 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.688814 [send snapshot] to:0 next:59 59-65 
+19:42:48.689047 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689105 [send snapshot] to:0 next:59 59-71 
+19:42:48.689206 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689268 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689316 [send snapshot] to:0 next:59 59-71 
+19:42:48.689360 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689409 [send snapshot] to:0 next:59 59-71 
+19:42:48.689466 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689514 [send snapshot] to:0 next:59 59-71 
+19:42:48.689567 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689628 [send snapshot] to:0 next:59 59-71 
+19:42:48.689677 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689727 [send snapshot] to:0 next:59 59-71 
+19:42:48.689763 [send snapshot] to:0 next:59 59-71 
+19:42:48.689808 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.689858 [send snapshot] to:0 next:59 59-71 
+19:42:48.690014 [send snapshot] to:0 next:59 59-71 
+19:42:48.690063 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.690099 [send snapshot] to:0 next:59 59-71 
+19:42:48.690161 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.690299 [send snapshot] to:0 next:59 59-71 
+19:42:48.690372 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:59 Entries:[] LeaderCommit:59}
+19:42:48.690567 [entry] 1 71
+19:42:48.690960 [apply command] 2 index:60
+19:42:48.690966 [apply command] 2 index:61
+19:42:48.690973 [apply command] 2 index:62
+19:42:48.690977 [apply command] 2 index:63
+19:42:48.690982 [apply command] 2 index:64
+19:42:48.690986 [apply command] 2 index:65
+19:42:48.690991 [apply command] 2 index:66
+19:42:48.690995 [apply command] 2 index:67
+19:42:48.691000 [apply command] 2 index:68
+19:42:48.691005 [apply command] 2 index:69
+19:42:48.691092 [apply command] 2 index:70
+19:42:48.691097 [apply command] 2 index:71
+19:42:48.692306 [entry] 1 71
+19:42:48.694660 [entry] 1 71
+19:42:48.695011 [entry] 1 71
+19:42:48.697992 [entry] 1 71
+19:42:48.700547 [entry] 1 71
+19:42:48.700679 [entry] 1 71
+19:42:48.702877 [entry] 1 71
+19:42:48.706745 [entry] 1 71
+19:42:48.710699 [entry] 1 71
+19:42:48.710844 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:71 Entries:[] LeaderCommit:71}
+19:42:48.710904 [send snapshot] to:0 next:59 69-71 
+19:42:48.716417 [entry] 1 71
+19:42:48.725241 [apply command] 1 index:60
+19:42:48.725253 [apply command] 1 index:61
+19:42:48.725261 [apply command] 1 index:62
+19:42:48.725265 [apply command] 1 index:63
+19:42:48.725269 [apply command] 1 index:64
+19:42:48.725272 [apply command] 1 index:65
+19:42:48.725276 [apply command] 1 index:66
+19:42:48.725289 [apply command] 1 index:67
+19:42:48.725296 [apply command] 1 index:68
+19:42:48.725299 [apply command] 1 index:69
+19:42:48.725418 [apply command] 1 index:70
+19:42:48.725428 [apply command] 1 index:71
+19:42:48.729878 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:71 Entries:[] LeaderCommit:71}
+19:42:48.730016 [send snapshot] to:0 next:59 69-72 
+19:42:48.751216 [entry] 1 72
+19:42:48.754259 [rpc snapshot] 69 commitIndex:49
+19:42:48.754362 [apply snapshot] 0 index:69
+19:42:48.754381 [snapshot installed success] 0
+19:42:48.754363 0 next:70
+19:42:48.760936 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:71 Entries:[] LeaderCommit:71}
+19:42:48.761027 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:69 Entries:[] LeaderCommit:71}
+19:42:48.763248 [entry] 1 72
+19:42:48.779272 [entry] 0 72
+19:42:48.779392 [apply command] 0 index:70
+19:42:48.779405 [apply command] 0 index:71
+19:42:48.811032 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:71 Entries:[] LeaderCommit:71}
+19:42:48.811099 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:69 Entries:[] LeaderCommit:71}
+19:42:48.818410 [entry] 0 72
+19:42:48.834360 [entry] 1 72
+19:42:48.834504 [apply command] 2 index:72
+19:42:48.861163 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:69 Entries:[] LeaderCommit:72}
+19:42:48.861360 [entry] 0 72
+19:42:48.861494 [apply command] 0 index:72
+19:42:48.861608 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:48.867353 [apply command] 1 index:72
+19:42:48.911364 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:48.911424 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:48.961451 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:48.961533 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.011547 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.011605 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.061650 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.061718 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.111750 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.111834 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.161841 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.161910 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.211918 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.211978 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.262012 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.262089 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.312131 [send command] to 0 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:49.312215 [send command] to 1 &{Term:5 LeaderId:2 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:50.338813 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:50.338891 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:50.352519 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:50.352576 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:72}
+19:42:50.376786 [entry] 1 73
+19:42:50.376904 [apply command] 0 index:73
+19:42:50.387030 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.387098 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.409439 [apply command] 1 index:73
+19:42:50.412978 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413041 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413092 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413139 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413192 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413229 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413274 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413311 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413356 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413395 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413454 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413515 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413590 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413657 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:73 Entries:[] LeaderCommit:73}
+19:42:50.413695 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.413741 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:5 PrevLogIndex:72 Entries:[] LeaderCommit:73}
+19:42:50.415862 [entry] 1 81
+19:42:50.415989 [apply command] 0 index:74
+19:42:50.415996 [apply command] 0 index:75
+19:42:50.416003 [apply command] 0 index:76
+19:42:50.416007 [apply command] 0 index:77
+19:42:50.416013 [apply command] 0 index:78
+19:42:50.416017 [apply command] 0 index:79
+19:42:50.416082 [apply command] 0 index:80
+19:42:50.416128 [apply command] 0 index:81
+19:42:50.417321 [entry] 1 81
+19:42:50.422853 [entry] 1 81
+19:42:50.424476 [entry] 1 81
+19:42:50.429254 [entry] 1 81
+19:42:50.432531 [entry] 1 81
+19:42:50.433824 [entry] 1 81
+19:42:50.437162 [send snapshot] to:2 next:73 79-81 
+19:42:50.437250 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:81 Entries:[] LeaderCommit:81}
+19:42:50.437580 [entry] 1 81
+19:42:50.450513 [apply command] 1 index:74
+19:42:50.450523 [apply command] 1 index:75
+19:42:50.450529 [apply command] 1 index:76
+19:42:50.450531 [apply command] 1 index:77
+19:42:50.450535 [apply command] 1 index:78
+19:42:50.450539 [apply command] 1 index:79
+19:42:50.450667 [apply command] 1 index:80
+19:42:50.450673 [apply command] 1 index:81
+19:42:50.453558 [send snapshot] to:2 next:73 79-82 
+19:42:50.453585 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:81 Entries:[] LeaderCommit:81}
+19:42:50.457808 [rpc snapshot] 79 commitIndex:69
+19:42:50.457889 [apply snapshot] 2 index:79
+19:42:50.457896 2 next:80
+19:42:50.457913 [snapshot installed success] 2
+19:42:50.475828 [entry] 1 82
+19:42:50.487275 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:79 Entries:[] LeaderCommit:81}
+19:42:50.487366 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:81 Entries:[] LeaderCommit:81}
+19:42:50.499641 [entry] 1 82
+19:42:50.499783 [apply command] 0 index:82
+19:42:50.507650 [entry] 2 82
+19:42:50.507784 [apply command] 2 index:80
+19:42:50.507791 [apply command] 2 index:81
+19:42:50.537366 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.537426 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.543758 [apply command] 1 index:82
+19:42:50.547750 [apply command] 2 index:82
+19:42:50.587469 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.587546 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.637576 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.637644 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.687680 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.687744 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.737779 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.737847 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.788010 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.788078 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.838104 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.838163 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.888207 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.888293 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.938301 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.938385 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.988416 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:50.988468 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.038519 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.038588 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.082189 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.082240 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.088605 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.088658 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:82}
+19:42:51.105464 [entry] 2 83
+19:42:51.105601 [apply command] 0 index:83
+19:42:51.108867 [entry] 2 83
+19:42:51.138714 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:83 Entries:[] LeaderCommit:83}
+19:42:51.138789 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:83}
+19:42:51.151048 [apply command] 2 index:83
+19:42:51.162845 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:83}
+19:42:51.162923 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:83}
+19:42:51.162983 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:83}
+19:42:51.163041 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:83 Entries:[] LeaderCommit:83}
+19:42:51.163100 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:83 Entries:[] LeaderCommit:83}
+19:42:51.163152 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:83 Entries:[] LeaderCommit:83}
+19:42:51.163218 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:82 Entries:[] LeaderCommit:83}
+19:42:51.163268 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:83 Entries:[] LeaderCommit:83}
+19:42:51.163306 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:83 Entries:[] LeaderCommit:83}
+19:42:51.163471 [entry] 2 93
+19:42:51.163584 [apply command] 0 index:84
+19:42:51.163590 [apply command] 0 index:85
+19:42:51.163598 [apply command] 0 index:86
+19:42:51.163601 [apply command] 0 index:87
+19:42:51.163606 [apply command] 0 index:88
+19:42:51.163608 [apply command] 0 index:89
+19:42:51.163713 [apply command] 0 index:90
+19:42:51.163718 [apply command] 0 index:91
+19:42:51.163724 [apply command] 0 index:92
+19:42:51.163728 [apply command] 0 index:93
+19:42:51.163737 [send snapshot] to:1 next:83 89-93 
+19:42:51.163785 [send snapshot] to:1 next:83 89-93 
+19:42:51.163836 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.163875 [send snapshot] to:1 next:83 89-93 
+19:42:51.163922 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.163967 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.164004 [send snapshot] to:1 next:83 89-93 
+19:42:51.164046 [send snapshot] to:1 next:83 89-93 
+19:42:51.164101 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.164141 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.164167 [send snapshot] to:1 next:83 89-93 
+19:42:51.166445 [apply command] 2 index:84
+19:42:51.166456 [apply command] 2 index:85
+19:42:51.166473 [apply command] 2 index:86
+19:42:51.166478 [apply command] 2 index:87
+19:42:51.166493 [apply command] 2 index:88
+19:42:51.166499 [apply command] 2 index:89
+19:42:51.166503 [apply command] 2 index:90
+19:42:51.166628 [apply command] 2 index:91
+19:42:51.166633 [apply command] 2 index:92
+19:42:51.166638 [apply command] 2 index:93
+19:42:51.183190 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.183234 [send snapshot] to:1 next:83 89-94 
+19:42:51.183356 [rpc snapshot] 89 commitIndex:79
+19:42:51.183406 1 next:90
+19:42:51.183421 [apply snapshot] 1 index:89
+19:42:51.183443 [snapshot installed success] 1
+19:42:51.188794 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.188853 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:89 Entries:[] LeaderCommit:93}
+19:42:51.210128 [entry] 1 94
+19:42:51.210197 [apply command] 1 index:90
+19:42:51.210202 [apply command] 1 index:91
+19:42:51.210207 [apply command] 1 index:92
+19:42:51.210210 [apply command] 1 index:93
+19:42:51.238905 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:93 Entries:[] LeaderCommit:93}
+19:42:51.238999 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:89 Entries:[] LeaderCommit:93}
+19:42:51.262241 [entry] 2 94
+19:42:51.262388 [apply command] 0 index:94
+19:42:51.289002 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.289090 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:89 Entries:[] LeaderCommit:94}
+19:42:51.312385 [apply command] 2 index:94
+19:42:51.339114 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:89 Entries:[] LeaderCommit:94}
+19:42:51.339195 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.342401 [entry] 1 94
+19:42:51.342462 [apply command] 1 index:94
+19:42:51.389198 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.389285 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:89 Entries:[] LeaderCommit:94}
+19:42:51.413561 [entry] 1 94
+19:42:51.439269 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.439343 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.489351 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.489418 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.539425 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.539511 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.590311 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.590404 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.640386 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.640452 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.690493 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.690555 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.740559 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.740626 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.790678 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.790731 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.840767 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.840994 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.869128 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.869192 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:94}
+19:42:51.884490 [entry] 2 95
+19:42:51.884627 [apply command] 0 index:95
+19:42:51.890867 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.890926 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.897224 [apply command] 2 index:95
+19:42:51.909540 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.909591 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.909636 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.909677 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.909720 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.909762 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.909805 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.909836 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.909873 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.909917 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.909951 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:95 Entries:[] LeaderCommit:95}
+19:42:51.909992 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:94 Entries:[] LeaderCommit:95}
+19:42:51.914181 [entry] 2 101
+19:42:51.914304 [apply command] 0 index:96
+19:42:51.914311 [apply command] 0 index:97
+19:42:51.914324 [apply command] 0 index:98
+19:42:51.914347 [apply command] 0 index:99
+19:42:51.914469 [apply command] 0 index:100
+19:42:51.914474 [apply command] 0 index:101
+19:42:51.916999 [entry] 2 101
+19:42:51.922941 [entry] 2 101
+19:42:51.923128 [entry] 2 101
+19:42:51.926004 [entry] 2 101
+19:42:51.930857 [entry] 2 101
+19:42:51.940954 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:101 Entries:[] LeaderCommit:101}
+19:42:51.941012 [send snapshot] to:1 next:95 99-101 
+19:42:51.944463 [apply command] 2 index:96
+19:42:51.944473 [apply command] 2 index:97
+19:42:51.944482 [apply command] 2 index:98
+19:42:51.944486 [apply command] 2 index:99
+19:42:51.944633 [apply command] 2 index:100
+19:42:51.944640 [apply command] 2 index:101
+19:42:51.950218 [send snapshot] to:1 next:95 99-102 
+19:42:51.950231 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:101 Entries:[] LeaderCommit:101}
+19:42:51.955539 [entry] 2 102
+19:42:51.955960 [apply command] 0 index:102
+19:42:51.958564 [rpc snapshot] 99 commitIndex:89
+19:42:51.958636 1 next:100
+19:42:51.958653 [apply snapshot] 1 index:99
+19:42:51.958669 [snapshot installed success] 1
+19:42:51.991050 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:51.991118 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:99 Entries:[] LeaderCommit:102}
+19:42:52.014390 [entry] 1 102
+19:42:52.014512 [apply command] 1 index:100
+19:42:52.014518 [apply command] 1 index:101
+19:42:52.014523 [apply command] 1 index:102
+19:42:52.015365 [apply command] 2 index:102
+19:42:52.041161 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.041250 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.091396 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.091530 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.141499 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.141568 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.191600 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.191666 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.241708 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.241772 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.291847 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.291913 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.342089 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.342159 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.392166 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.392226 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.442279 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.442365 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.492379 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.492476 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.543055 [send command] to 2 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:52.543135 [send command] to 1 &{Term:6 LeaderId:0 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.563718 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.563794 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.581443 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.581525 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.586751 [entry] 2 103
+19:42:53.605437 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.605523 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:102}
+19:42:53.611707 [entry] 2 103
+19:42:53.611838 [apply command] 1 index:103
+19:42:53.655529 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.655597 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.679868 [apply command] 2 index:103
+19:42:53.682184 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682266 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.682325 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682399 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682458 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.682503 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682544 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.682632 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682697 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.682748 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682782 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.682830 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682866 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.682910 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.682972 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.683019 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.683053 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.683099 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.683133 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.683179 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.683215 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:103 Entries:[] LeaderCommit:103}
+19:42:53.683262 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:6 PrevLogIndex:102 Entries:[] LeaderCommit:103}
+19:42:53.687934 [entry] 2 114
+19:42:53.688033 [apply command] 1 index:104
+19:42:53.688037 [apply command] 1 index:105
+19:42:53.688048 [apply command] 1 index:106
+19:42:53.688051 [apply command] 1 index:107
+19:42:53.688055 [apply command] 1 index:108
+19:42:53.688058 [apply command] 1 index:109
+19:42:53.688155 [apply command] 1 index:110
+19:42:53.688158 [apply command] 1 index:111
+19:42:53.688162 [apply command] 1 index:112
+19:42:53.688165 [apply command] 1 index:113
+19:42:53.688169 [apply command] 1 index:114
+19:42:53.696853 [entry] 2 114
+19:42:53.697122 [entry] 2 114
+19:42:53.698633 [entry] 2 114
+19:42:53.699521 [entry] 2 114
+19:42:53.699773 [entry] 2 114
+19:42:53.701250 [entry] 2 114
+19:42:53.703364 [entry] 2 114
+19:42:53.705632 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:114 Entries:[] LeaderCommit:114}
+19:42:53.705706 [send snapshot] to:0 next:103 109-114 
+19:42:53.706487 [entry] 2 114
+19:42:53.718958 [apply command] 2 index:104
+19:42:53.718970 [apply command] 2 index:105
+19:42:53.718984 [apply command] 2 index:106
+19:42:53.718988 [apply command] 2 index:107
+19:42:53.718997 [apply command] 2 index:108
+19:42:53.719000 [apply command] 2 index:109
+19:42:53.719132 [apply command] 2 index:110
+19:42:53.719136 [apply command] 2 index:111
+19:42:53.719142 [apply command] 2 index:112
+19:42:53.719146 [apply command] 2 index:113
+19:42:53.719152 [apply command] 2 index:114
+19:42:53.722617 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:114 Entries:[] LeaderCommit:114}
+19:42:53.722671 [send snapshot] to:0 next:103 109-115 
+19:42:53.724967 [rpc snapshot] 109 commitIndex:99
+19:42:53.725044 0 next:110
+19:42:53.725061 [apply snapshot] 0 index:109
+19:42:53.725076 [snapshot installed success] 0
+19:42:53.739884 [entry] 2 115
+19:42:53.740021 [apply command] 1 index:115
+19:42:53.755698 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.755767 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:109 Entries:[] LeaderCommit:115}
+19:42:53.769315 [entry] 0 115
+19:42:53.769489 [apply command] 0 index:110
+19:42:53.769497 [apply command] 0 index:111
+19:42:53.769508 [apply command] 0 index:112
+19:42:53.769512 [apply command] 0 index:113
+19:42:53.769519 [apply command] 0 index:114
+19:42:53.769523 [apply command] 0 index:115
+19:42:53.805789 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.805852 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.824121 [apply command] 2 index:115
+19:42:53.855882 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.855954 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.905956 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.906038 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.956057 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:53.956143 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.006139 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.006220 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.056235 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.056288 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.106993 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.107067 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.157085 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.157136 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.207130 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.207176 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.257207 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.257250 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.307277 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.307331 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.319344 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.319392 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:115}
+19:42:54.334622 [entry] 0 116
+19:42:54.334742 [apply command] 1 index:116
+19:42:54.357354 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.357443 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.379703 [apply command] 0 index:116
+19:42:54.399985 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400059 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400124 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400193 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400240 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400284 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400331 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400406 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400489 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400545 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400598 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400649 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400701 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400757 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400821 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400873 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.400919 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.400976 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.401044 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.401105 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.401160 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.401221 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.401267 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.401323 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.401368 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:115 Entries:[] LeaderCommit:116}
+19:42:54.401417 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:116 Entries:[] LeaderCommit:116}
+19:42:54.404825 [entry] 0 129
+19:42:54.404981 [apply command] 1 index:117
+19:42:54.404988 [apply command] 1 index:118
+19:42:54.404996 [apply command] 1 index:119
+19:42:54.404999 [apply command] 1 index:120
+19:42:54.405165 [apply command] 1 index:121
+19:42:54.405171 [apply command] 1 index:122
+19:42:54.405176 [apply command] 1 index:123
+19:42:54.405180 [apply command] 1 index:124
+19:42:54.405185 [apply command] 1 index:125
+19:42:54.405188 [apply command] 1 index:126
+19:42:54.405193 [apply command] 1 index:127
+19:42:54.405197 [apply command] 1 index:128
+19:42:54.405202 [apply command] 1 index:129
+19:42:54.407364 [entry] 0 129
+19:42:54.407529 [send snapshot] to:2 next:116 129-129 
+19:42:54.407596 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:129 Entries:[] LeaderCommit:129}
+19:42:54.411785 [entry] 0 129
+19:42:54.413143 [entry] 0 129
+19:42:54.413418 [entry] 0 129
+19:42:54.414666 [entry] 0 129
+19:42:54.416590 [entry] 0 129
+19:42:54.417905 [entry] 0 129
+19:42:54.421452 [entry] 0 129
+19:42:54.423066 [entry] 0 129
+19:42:54.423426 [apply command] 0 index:117
+19:42:54.423447 [apply command] 0 index:118
+19:42:54.423456 [apply command] 0 index:119
+19:42:54.423460 [apply command] 0 index:120
+19:42:54.424010 [apply command] 0 index:121
+19:42:54.424020 [apply command] 0 index:122
+19:42:54.424035 [apply command] 0 index:123
+19:42:54.424040 [apply command] 0 index:124
+19:42:54.424046 [apply command] 0 index:125
+19:42:54.424051 [apply command] 0 index:126
+19:42:54.424071 [apply command] 0 index:127
+19:42:54.424076 [apply command] 0 index:128
+19:42:54.424081 [apply command] 0 index:129
+19:42:54.440428 [send snapshot] to:2 next:116 129-130 
+19:42:54.440562 [rpc snapshot] 129 commitIndex:0
+19:42:54.440613 2 next:130
+19:42:54.440629 [apply snapshot] 2 index:129
+19:42:54.440644 [snapshot installed success] 2
+19:42:54.440829 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:129 Entries:[] LeaderCommit:129}
+19:42:54.457632 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:129 Entries:[] LeaderCommit:129}
+19:42:54.457705 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:129 Entries:[] LeaderCommit:129}
+19:42:54.458917 [entry] 2 130
+19:42:54.459096 [apply command] 1 index:130
+19:42:54.507741 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.507826 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:129 Entries:[] LeaderCommit:130}
+19:42:54.508082 [entry] 0 130
+19:42:54.508181 [apply command] 0 index:130
+19:42:54.510083 [apply command] 2 index:130
+19:42:54.557840 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.557917 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.608309 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.608401 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.658409 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.658477 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.708498 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.708570 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.758603 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.758793 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.808727 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.808810 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.858806 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.858867 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.909077 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.909236 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.959331 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:54.959420 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:55.002912 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:55.002984 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:130}
+19:42:55.006222 [entry] 0 131
+19:42:55.006319 [apply command] 1 index:131
+19:42:55.009441 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.009522 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.026871 [apply command] 0 index:131
+19:42:55.043217 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.043332 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.043392 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.043457 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.043512 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.043565 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.043612 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.043667 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.043719 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.043768 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:131 Entries:[] LeaderCommit:131}
+19:42:55.043811 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.043855 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:131}
+19:42:55.045538 [entry] 0 136
+19:42:55.045669 [apply command] 1 index:132
+19:42:55.045681 [apply command] 1 index:133
+19:42:55.045689 [apply command] 1 index:134
+19:42:55.045693 [apply command] 1 index:135
+19:42:55.045698 [apply command] 1 index:136
+19:42:55.052039 [entry] 0 137
+19:42:55.052165 [apply command] 1 index:137
+19:42:55.053691 [entry] 0 137
+19:42:55.054055 [entry] 0 137
+19:42:55.057921 [entry] 0 137
+19:42:55.059541 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:137}
+19:42:55.059628 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:137 Entries:[] LeaderCommit:137}
+19:42:55.069909 [apply command] 0 index:132
+19:42:55.069921 [apply command] 0 index:133
+19:42:55.069927 [apply command] 0 index:134
+19:42:55.069930 [apply command] 0 index:135
+19:42:55.069934 [apply command] 0 index:136
+19:42:55.069937 [apply command] 0 index:137
+19:42:55.084493 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:130 Entries:[] LeaderCommit:137}
+19:42:55.084552 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:137 Entries:[] LeaderCommit:137}
+19:42:55.090793 [entry] 2 138
+19:42:55.090913 [apply command] 1 index:138
+19:42:55.090937 [apply command] 2 index:130
+19:42:55.090944 [apply command] 2 index:131
+19:42:55.090951 [apply command] 2 index:132
+19:42:55.090953 [apply command] 2 index:133
+19:42:55.090958 [apply command] 2 index:134
+19:42:55.090960 [apply command] 2 index:135
+19:42:55.090964 [apply command] 2 index:136
+19:42:55.090967 [apply command] 2 index:137
+19:42:55.109654 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.109731 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:137 Entries:[] LeaderCommit:138}
+19:42:55.118003 [entry] 0 138
+19:42:55.118141 [apply command] 0 index:138
+19:42:55.135977 [apply command] 2 index:138
+19:42:55.159854 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.159916 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.209977 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.210043 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.260083 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.260163 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.310219 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.310293 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.360329 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.360412 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.410418 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.410500 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.460469 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.460530 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.510696 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.510763 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.560779 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.560854 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.610873 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.610938 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.660961 [send command] to 2 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:55.661006 [send command] to 0 &{Term:7 LeaderId:1 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.363643 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.363703 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.392386 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.392461 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.393358 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.393419 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:7 PrevLogIndex:138 Entries:[] LeaderCommit:138}
+19:42:59.413562 [entry] 2 139
+19:42:59.413723 [apply command] 0 index:139
+19:42:59.442560 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:139 Entries:[] LeaderCommit:139}
+19:42:59.442630 [send snapshot] to:1 next:139 139-139 
+19:42:59.445951 [apply command] 2 index:139
+19:42:59.453733 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:139 Entries:[] LeaderCommit:139}
+19:42:59.453800 [send snapshot] to:1 next:139 139-140 
+19:42:59.470310 [entry] 2 140
+19:42:59.470482 [apply command] 0 index:140
+19:42:59.492673 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:140 Entries:[] LeaderCommit:140}
+19:42:59.492768 [send snapshot] to:1 next:139 139-140 
+19:42:59.542798 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:140 Entries:[] LeaderCommit:140}
+19:42:59.542861 [send snapshot] to:1 next:139 139-140 
+19:42:59.592950 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:140 Entries:[] LeaderCommit:140}
+19:42:59.593010 [send snapshot] to:1 next:139 139-140 
+19:42:59.594355 [apply command] 2 index:140
+19:42:59.595130 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:140 Entries:[] LeaderCommit:140}
+19:42:59.595190 [send snapshot] to:1 next:139 139-141 
+19:42:59.597381 [entry] 2 141
+19:42:59.597492 [apply command] 0 index:141
+19:42:59.620666 [rpc snapshot] 139 commitIndex:129
+19:42:59.620757 1 next:140
+19:42:59.620773 [apply snapshot] 1 index:139
+19:42:59.620788 [snapshot installed success] 1
+19:42:59.643834 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.643913 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:139 Entries:[] LeaderCommit:141}
+19:42:59.662214 [apply command] 2 index:141
+19:42:59.668460 [entry] 1 141
+19:42:59.668580 [apply command] 1 index:140
+19:42:59.668590 [apply command] 1 index:141
+19:42:59.694122 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.694205 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.744221 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.744304 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.794325 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.794421 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.844494 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.844711 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.894885 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.894970 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.945003 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.945091 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.995079 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:42:59.995144 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.046723 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.046801 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.096859 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.096945 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.146975 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.147058 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.181295 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.181364 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:141}
+19:43:00.195797 [entry] 2 142
+19:43:00.195884 [apply command] 0 index:142
+19:43:00.197059 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.197108 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.204404 [apply command] 2 index:142
+19:43:00.222006 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.222074 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.222176 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.222225 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.222280 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.222345 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.222398 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.222480 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.222538 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.222583 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.222735 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:142 Entries:[] LeaderCommit:142}
+19:43:00.222821 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:142}
+19:43:00.226307 [entry] 2 148
+19:43:00.226478 [apply command] 0 index:143
+19:43:00.226487 [apply command] 0 index:144
+19:43:00.226494 [apply command] 0 index:145
+19:43:00.226498 [apply command] 0 index:146
+19:43:00.226504 [apply command] 0 index:147
+19:43:00.226522 [apply command] 0 index:148
+19:43:00.231561 [entry] 2 148
+19:43:00.235779 [entry] 2 148
+19:43:00.237918 [entry] 2 148
+19:43:00.240490 [entry] 2 148
+19:43:00.247158 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:148 Entries:[] LeaderCommit:148}
+19:43:00.247228 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:148}
+19:43:00.248042 [entry] 2 148
+19:43:00.263619 [apply command] 2 index:143
+19:43:00.263633 [apply command] 2 index:144
+19:43:00.263642 [apply command] 2 index:145
+19:43:00.263646 [apply command] 2 index:146
+19:43:00.263652 [apply command] 2 index:147
+19:43:00.263656 [apply command] 2 index:148
+19:43:00.283183 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:148 Entries:[] LeaderCommit:148}
+19:43:00.283246 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:148}
+19:43:00.297262 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:148 Entries:[] LeaderCommit:148}
+19:43:00.297315 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:141 Entries:[] LeaderCommit:148}
+19:43:00.299477 [entry] 2 149
+19:43:00.299604 [apply command] 0 index:149
+19:43:00.301105 [entry] 1 149
+19:43:00.301319 [apply command] 1 index:140
+19:43:00.301352 [apply command] 1 index:141
+19:43:00.301372 [apply command] 1 index:142
+19:43:00.301376 [apply command] 1 index:143
+19:43:00.301382 [apply command] 1 index:144
+19:43:00.301386 [apply command] 1 index:145
+19:43:00.301397 [apply command] 1 index:146
+19:43:00.301402 [apply command] 1 index:147
+19:43:00.301408 [apply command] 1 index:148
+19:43:00.302216 [entry] 1 149
+19:43:00.321729 [entry] 2 149
+19:43:00.347438 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.348102 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.348191 [apply command] 2 index:149
+19:43:00.372661 [apply command] 1 index:149
+19:43:00.397970 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.398032 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.448116 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.448204 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.500617 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.500695 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.550747 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.550825 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.600850 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.600918 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.650907 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.650989 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.701006 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.701129 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.751211 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.751285 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.801311 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.801360 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.848781 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.848838 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.851400 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.851483 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:149}
+19:43:00.867843 [entry] 2 150
+19:43:00.867988 [apply command] 0 index:150
+19:43:00.901486 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.901563 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:150}
+19:43:00.922913 [apply command] 2 index:150
+19:43:00.929460 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.929545 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:150}
+19:43:00.929604 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.929672 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:150}
+19:43:00.929734 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.929795 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:150}
+19:43:00.929869 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.929929 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:150}
+19:43:00.929988 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.930034 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:149 Entries:[] LeaderCommit:150}
+19:43:00.930074 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:150 Entries:[] LeaderCommit:150}
+19:43:00.930219 [entry] 2 162
+19:43:00.930312 [apply command] 0 index:151
+19:43:00.930316 [apply command] 0 index:152
+19:43:00.930322 [apply command] 0 index:153
+19:43:00.930324 [apply command] 0 index:154
+19:43:00.930348 [apply command] 0 index:155
+19:43:00.930354 [apply command] 0 index:156
+19:43:00.930359 [apply command] 0 index:157
+19:43:00.930362 [apply command] 0 index:158
+19:43:00.930365 [apply command] 0 index:159
+19:43:00.930368 [apply command] 0 index:160
+19:43:00.930571 [apply command] 0 index:161
+19:43:00.930577 [apply command] 0 index:162
+19:43:00.930585 [send snapshot] to:1 next:150 159-162 
+19:43:00.930639 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.930674 [send snapshot] to:1 next:150 159-162 
+19:43:00.930730 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.930765 [send snapshot] to:1 next:150 159-162 
+19:43:00.930815 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.930850 [send snapshot] to:1 next:150 159-162 
+19:43:00.930893 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.930920 [send snapshot] to:1 next:150 159-162 
+19:43:00.930965 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.931009 [send snapshot] to:1 next:150 159-162 
+19:43:00.931056 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.931088 [send snapshot] to:1 next:150 159-162 
+19:43:00.932007 [entry] 2 162
+19:43:00.935326 [apply command] 2 index:151
+19:43:00.935334 [apply command] 2 index:152
+19:43:00.935340 [apply command] 2 index:153
+19:43:00.935343 [apply command] 2 index:154
+19:43:00.935347 [apply command] 2 index:155
+19:43:00.935360 [apply command] 2 index:156
+19:43:00.935365 [apply command] 2 index:157
+19:43:00.935372 [apply command] 2 index:158
+19:43:00.935376 [apply command] 2 index:159
+19:43:00.935379 [apply command] 2 index:160
+19:43:00.935524 [apply command] 2 index:161
+19:43:00.935528 [apply command] 2 index:162
+19:43:00.949912 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.949959 [send snapshot] to:1 next:150 159-163 
+19:43:00.951695 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:162 Entries:[] LeaderCommit:162}
+19:43:00.951723 [send snapshot] to:1 next:150 159-163 
+19:43:00.954183 [entry] 2 163
+19:43:00.954301 [apply command] 0 index:163
+19:43:00.956199 [rpc snapshot] 159 commitIndex:149
+19:43:00.956302 1 next:160
+19:43:00.956311 [apply snapshot] 1 index:159
+19:43:00.956337 [snapshot installed success] 1
+19:43:00.958117 [rpc snapshot] 159 commitIndex:159
+19:43:00.958232 1 next:160
+19:43:00.958395 [entry] 2 163
+19:43:01.001823 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.001941 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:159 Entries:[] LeaderCommit:163}
+19:43:01.007346 [apply command] 2 index:163
+19:43:01.024225 [entry] 1 163
+19:43:01.024329 [apply command] 1 index:160
+19:43:01.024335 [apply command] 1 index:161
+19:43:01.024344 [apply command] 1 index:162
+19:43:01.024348 [apply command] 1 index:163
+19:43:01.051931 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.052016 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.102009 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.102097 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.152082 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.152169 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.202184 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.202264 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.252623 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.252719 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.302708 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.302793 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.352829 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.352879 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.402917 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.402982 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.453496 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.453570 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.503597 [send command] to 2 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}
+19:43:01.503667 [send command] to 1 &{Term:10 LeaderId:0 PrevLogTerm:10 PrevLogIndex:163 Entries:[] LeaderCommit:163}

@@ -6,8 +6,9 @@ import "log"
 // const Debugging = true
 const Debugging = false
 
-func Debug(format string, a ...interface{}) {
+func DPrintf(format string, a ...interface{}) {
 	if Debugging {
+        log.SetFlags(log.Lmicroseconds)
 		log.Printf(format, a...)
 	}
 }

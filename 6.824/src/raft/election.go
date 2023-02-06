@@ -16,6 +16,7 @@ func (rf *Raft) setElectionTimeL() {
 }
 
 func (rf *Raft) becomeFollowerL(term int) {
+    DPrintf("%v become leader\n", rf.me)
     rf.state = FOLLOWER
     rf.currentTerm = term
     rf.votedFor = -1
@@ -26,7 +27,6 @@ func (rf *Raft) becomeLeaderL() {
     rf.state = LEADER
     for i := 0; i < len(rf.nextIndex); i++ {
         rf.nextIndex[i] = rf.log.lastIndex() + 1
-        rf.matchIndex[i] = 0
     }
     rf.sendAppendsL()
 }
@@ -37,20 +37,22 @@ func (rf *Raft) collectVote(server int, args *RequestVoteArgs, votes *int) {
 
     if ok {
         rf.mu.Lock()
-        if reply.Term < args.Term {
-            rf.mu.Unlock()
+        defer rf.mu.Unlock()
+
+        if args.Term != rf.currentTerm {
             return
         }
+
         if reply.VoteGranted {
             *votes++
             if *votes > len(rf.peers) / 2 && rf.state == CANDIDATE && rf.currentTerm == args.Term {
                 rf.becomeLeaderL()
             }
         }
+
         if reply.Term > rf.currentTerm {
             rf.becomeFollowerL(reply.Term)
         }
-        rf.mu.Unlock()
     }
 }
 

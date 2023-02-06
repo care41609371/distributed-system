@@ -33,7 +33,9 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
     rf.setElectionTimeL()
     reply.Term = rf.currentTerm
 
-    if args.LastIncludedIndex <= rf.log.LastIncludedIndex {
+    DPrintf("[rpc snapshot] %v commitIndex:%v", args.LastIncludedIndex, rf.commitIndex)
+
+    if args.LastIncludedIndex <= rf.log.LastIncludedIndex || args.LastIncludedIndex <= rf.commitIndex {
         return
     }
 
@@ -66,6 +68,10 @@ func (rf *Raft) sendSnapshot(server int) {
         rf.mu.Lock()
         defer rf.mu.Unlock()
 
+        if args.Term != rf.currentTerm {
+            return
+        }
+
         if reply.Term > rf.currentTerm {
             rf.becomeFollowerL(reply.Term)
             return
@@ -80,9 +86,11 @@ func (rf *Raft) CondInstallSnapshot(snapshotTerm int, snapshotIndex int, snapsho
     rf.mu.Lock()
     defer rf.mu.Unlock()
 
-    if snapshotIndex <= rf.log.LastIncludedIndex {
+    if snapshotIndex <= rf.log.LastIncludedIndex || snapshotIndex <= rf.commitIndex {
         return false
     }
+
+    DPrintf("[snapshot installed success] %v\n", rf.me)
 
     rf.log.rebuild(snapshotIndex, snapshotTerm)
     rf.lastApplied = snapshotIndex
@@ -100,8 +108,7 @@ func (rf *Raft) Snapshot(index int, snapshot []byte) {
     rf.mu.Lock()
     defer rf.mu.Unlock()
 
-    // Your code
-    if index <= rf.log.LastIncludedIndex {
+    if index <= rf.log.LastIncludedIndex || index > rf.log.lastIndex() {
         return
     }
 

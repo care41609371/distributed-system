@@ -1,6 +1,9 @@
 package raft
 
-import "reflect"
+import (
+    "reflect"
+    "fmt"
+)
 
 type Entry struct {
     Term int
@@ -43,7 +46,8 @@ func (l *logEntry) at(index int) *Entry {
     } else if index == l.LastIncludedIndex {
         return &Entry{l.LastIncludedTerm, nil}
     } else {
-        panic("log index out of bound!\n")
+        s := fmt.Sprintf("%v log index out of bound! %v-%v\n", index, l.LastIncludedIndex, l.lastIndex())
+        panic(s)
     }
 }
 
@@ -66,6 +70,7 @@ func (l *logEntry) append(prevLogIndex int, es ...Entry) {
             if !reflect.DeepEqual(l.Entries[i - l.LastIncludedIndex - 1], es[j]) {
                 break
             }
+            j++
         }
     }
 
