@@ -1,33 +1,33 @@
 package kvraft
 
 const (
-	OK             = "OK"
-	ErrNoKey       = "ErrNoKey"
-	ErrWrongLeader = "ErrWrongLeader"
+    OK             = "OK"
+    ErrNoKey       = "ErrNoKey"
+    ErrWrongLeader = "ErrWrongLeader"
 )
 
 type Err string
 
 // Put or Append
 type PutAppendArgs struct {
-	Key   string
-	Value string
-	Op    string // "Put" or "Append"
-	// You'll have to add definitions here.
-	// Field names must start with capital letters,
-	// otherwise RPC will break.
+    Key        string
+    Value      string
+    Op         string // "Put" or "Append"
+    ClientId   int64
+    SequenceId int64
 }
 
 type PutAppendReply struct {
-	Err Err
+    Err Err
 }
 
 type GetArgs struct {
-	Key string
-	// You'll have to add definitions here.
+    Key        string
+    ClientId   int64
+    SequenceId int64
 }
 
 type GetReply struct {
-	Err   Err
-	Value string
+    Err   Err
+    Value string
 }
