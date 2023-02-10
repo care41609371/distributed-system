@@ -161,13 +161,11 @@ func (rf *Raft) sendAppend(server int) {
     }
 
     next := min(rf.nextIndex[server], rf.log.lastIndex() + 1)
-
     if next <= rf.log.LastIncludedIndex {
         rf.mu.Unlock()
         rf.sendSnapshot(server)
         return
     }
-
 
     args := &AppendEntriesArgs{
         Term : rf.currentTerm,

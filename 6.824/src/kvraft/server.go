@@ -169,8 +169,9 @@ func (kv *KVServer) process() {
         }
 
         if msg.SnapshotValid {
-            DPrintf("apply snapshot\n")
-            kv.readSnapshot(msg.Snapshot)
+            if (kv.rf.CondInstallSnapshot(msg.SnapshotTerm, msg.SnapshotIndex, msg.Snapshot)) {
+               kv.readSnapshot(msg.Snapshot)
+            }
         } else {
             op := msg.Command.(Operation)
 
@@ -212,14 +213,12 @@ func (kv *KVServer) process() {
             reply, ok := kv.operationReplys[msg.CommandIndex]
 
             if kv.maxraftstate > -1 && kv.rf.RaftStateSize() >= kv.maxraftstate {
-                DPrintf("cut\n")
                 kv.saveSnapshotL(msg.CommandIndex)
             }
 
             kv.mu.Unlock()
 
             if ok {
-                //DPrintf("<-apply me:%v %+v seq:%v\n", kv.id, op, kv.historySeq[op.ClientId])
                 reply <- or
             }
         }

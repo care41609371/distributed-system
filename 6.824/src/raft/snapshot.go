@@ -37,8 +37,6 @@ func (rf *Raft) InstallSnapshot(args *InstallSnapshotArgs, reply *InstallSnapsho
         return
     }
 
-    DPrintf("receive snapshot rpc lastincludedindex:%v\n", args.LastIncludedIndex)
-
     rf.waitingSnapshotIndex = args.LastIncludedIndex
     rf.waitingSnapshotTerm = args.LastIncludedTerm
     rf.waitingSnapshot = args.Data
@@ -61,6 +59,7 @@ func (rf *Raft) sendSnapshot(server int) {
         Data : rf.persister.ReadSnapshot(),
     }
     rf.mu.Unlock()
+
     reply := &InstallSnapshotReply{}
     ok := rf.sendInstallSnapshot(server, args, reply)
 
@@ -78,7 +77,7 @@ func (rf *Raft) sendSnapshot(server int) {
         }
 
         rf.nextIndex[server] = max(rf.nextIndex[server], args.LastIncludedIndex + 1)
-        rf.matchIndex[server] = max(rf.nextIndex[server], args.LastIncludedIndex)
+        rf.matchIndex[server] = max(rf.matchIndex[server], args.LastIncludedIndex)
     }
 }
 
@@ -87,11 +86,8 @@ func (rf *Raft) CondInstallSnapshot(snapshotTerm int, snapshotIndex int, snapsho
     defer rf.mu.Unlock()
 
     if snapshotIndex <= rf.log.LastIncludedIndex || snapshotIndex <= rf.commitIndex {
-        DPrintf("cond false snapshotindex:%v\n rf.lastindex:%v commitindex:%v", snapshotIndex, rf.log.LastIncludedIndex, rf.commitIndex)
         return false
     }
-
-    DPrintf("install snapshot\n")
 
     rf.log.rebuild(snapshotIndex, snapshotTerm)
     rf.lastApplied = snapshotIndex
@@ -108,15 +104,11 @@ func (rf *Raft) CondInstallSnapshot(snapshotTerm int, snapshotIndex int, snapsho
 func (rf *Raft) Snapshot(index int, snapshot []byte) {
     rf.mu.Lock()
     defer rf.mu.Unlock()
-    DPrintf("snapshot request\n")
     if index <= rf.log.LastIncludedIndex || index > rf.log.lastIndex() {
         return
     }
 
-    DPrintf("do snapshot\n")
-
     rf.log.rebuild(index, rf.log.at(index).Term)
-
     rf.persistStateAndSnapshot(snapshot)
 }
 

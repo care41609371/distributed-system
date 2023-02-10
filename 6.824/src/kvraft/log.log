@@ -1,25 +1,68 @@
-10:53:09.061257 [2143039896670928077] Put key:1, value:13 seq:1
-10:53:10.224160 <-apply me:2 {Op:Put Key:1 Value:13 ClientId:2143039896670928077 SequenceId:1} seq:1
-10:53:10.224421 [441080405226538670] Put key:1, value:14 seq:1
-10:53:11.295583 <-apply me:0 {Op:Put Key:1 Value:14 ClientId:441080405226538670 SequenceId:1} seq:1
-10:53:11.295678 [441080405226538670] Get key:1 seq:2
-10:53:11.296265 <-apply me:0 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:2} seq:2
-10:53:11.296352 [441080405226538670] Get success value:14
-10:53:11.296389 [3193719640042775739] Get key:1 seq:1
-10:53:11.296556 [1794777520366638156] Put key:1, value:15 seq:1
-10:53:12.296476 [441080405226538670] Get key:1 seq:3
-10:53:12.297313 <-apply me:0 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:3} seq:3
-10:53:12.297409 [441080405226538670] Get success value:14
-10:53:12.297416 [441080405226538670] Put key:1, value:16 seq:4
-10:53:12.298126 <-apply me:0 {Op:Put Key:1 Value:16 ClientId:441080405226538670 SequenceId:4} seq:4
-10:53:12.298184 [441080405226538670] Get key:1 seq:5
-10:53:12.298778 <-apply me:0 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:5} seq:5
-10:53:12.298828 [441080405226538670] Get success value:16
-10:53:12.329391 <-apply me:2 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:2} seq:2
-10:53:12.329476 [3193719640042775739] Get success value:14
-10:53:12.350326 <-apply me:0 {Op:Put Key:1 Value:15 ClientId:1794777520366638156 SequenceId:1} seq:1
-10:53:13.299004 [2143039896670928077] Get key:1 seq:2
-10:53:13.299779 <-apply me:0 {Op:Get Key:1 Value: ClientId:2143039896670928077 SequenceId:2} seq:2
-10:53:13.299832 [2143039896670928077] Get success value:15
-
-Success
+Test: InstallSnapshot RPC (3B) ...
+19:17:58.423062 0 become leader
+19:17:58.464812 leader:0 send snapshot to 2 next；3
+19:17:58.465255 leader:0 send snapshot to 2 next；3
+19:17:58.465577 leader:0 send snapshot to 2 next；3
+19:17:58.465915 leader:0 send snapshot to 2 next；3
+19:17:58.466242 leader:0 send snapshot to 2 next；3
+19:17:58.466689 leader:0 send snapshot to 2 next；3
+19:17:58.467096 leader:0 send snapshot to 2 next；3
+19:17:58.467448 leader:0 send snapshot to 2 next；3
+19:17:58.467778 leader:0 send snapshot to 2 next；3
+19:17:58.468149 leader:0 send snapshot to 2 next；3
+19:17:58.468491 leader:0 send snapshot to 2 next；3
+19:17:58.468795 leader:0 send snapshot to 2 next；3
+19:17:58.469103 leader:0 send snapshot to 2 next；3
+19:17:58.469454 leader:0 send snapshot to 2 next；3
+19:17:58.469877 leader:0 send snapshot to 2 next；3
+19:17:58.470216 leader:0 send snapshot to 2 next；3
+19:17:58.470645 leader:0 send snapshot to 2 next；3
+19:17:58.471122 leader:0 send snapshot to 2 next；3
+19:17:58.471632 leader:0 send snapshot to 2 next；3
+19:17:58.472112 leader:0 send snapshot to 2 next；3
+19:17:58.472591 leader:0 send snapshot to 2 next；3
+19:17:58.472808 leader:0 send snapshot to 2 next；3
+19:17:58.474819 leader:0 send snapshot to 2 next；3
+19:17:58.475313 leader:0 send snapshot to 2 next；3
+19:17:58.475724 leader:0 send snapshot to 2 next；3
+19:17:58.476117 leader:0 send snapshot to 2 next；3
+19:17:58.476620 leader:0 send snapshot to 2 next；3
+19:17:58.477104 leader:0 send snapshot to 2 next；3
+19:17:58.477537 leader:0 send snapshot to 2 next；3
+19:17:58.478053 leader:0 send snapshot to 2 next；3
+19:17:58.478518 leader:0 send snapshot to 2 next；3
+19:17:58.478857 leader:0 send snapshot to 2 next；3
+19:17:58.479196 leader:0 send snapshot to 2 next；3
+19:17:58.479546 leader:0 send snapshot to 2 next；3
+19:17:58.479875 leader:0 send snapshot to 2 next；3
+19:17:58.480216 leader:0 send snapshot to 2 next；3
+19:17:58.480553 leader:0 send snapshot to 2 next；3
+19:17:58.480885 leader:0 send snapshot to 2 next；3
+19:17:58.522898 leader:0 send snapshot to 2 next；3
+19:17:58.572982 leader:0 send snapshot to 2 next；3
+19:17:58.623122 leader:0 send snapshot to 2 next；3
+19:17:58.673255 leader:0 send snapshot to 2 next；3
+19:17:58.723348 leader:0 send snapshot to 2 next；3
+19:17:58.773486 leader:0 send snapshot to 2 next；3
+19:17:58.823594 leader:0 send snapshot to 2 next；3
+19:17:58.873686 leader:0 send snapshot to 2 next；3
+19:17:58.923787 leader:0 send snapshot to 2 next；3
+19:17:58.973885 leader:0 send snapshot to 2 next；3
+19:17:59.024013 leader:0 send snapshot to 2 next；3
+19:17:59.074098 leader:0 send snapshot to 2 next；3
+19:17:59.124211 leader:0 send snapshot to 2 next；3
+19:17:59.174324 leader:0 send snapshot to 2 next；3
+19:17:59.224436 leader:0 send snapshot to 2 next；3
+19:17:59.274563 leader:0 send snapshot to 2 next；3
+19:17:59.324726 leader:0 send snapshot to 2 next；3
+19:17:59.374902 leader:0 send snapshot to 2 next；3
+19:17:59.425015 leader:0 send snapshot to 2 next；3
+19:17:59.475158 leader:0 send snapshot to 2 next；3
+19:17:59.481543 leader:0 send snapshot to 2 next；3
+19:17:59.482352 leader:0 send snapshot to 2 next；3
+19:17:59.482532 2 receive snapshot rpc lastincludedindex:43
+19:17:59.482707 leader:0 lastincludedindex:43 send snapshot to 2 receive reply match:2 next:3
+19:17:59.482714 leader:0 lastincludedindex:43 send snapshot to 2 receive reply match:43 next:44
+  ... Passed --   2.1  3  9152   63
+PASS
+ok  	6.824/kvraft	2.114s

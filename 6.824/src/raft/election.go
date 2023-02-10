@@ -23,7 +23,6 @@ func (rf *Raft) becomeFollowerL(term int) {
 }
 
 func (rf *Raft) becomeLeaderL() {
-    DPrintf("%v become leader\n", rf.me)
     rf.state = LEADER
     for i := 0; i < len(rf.nextIndex); i++ {
         rf.nextIndex[i] = rf.log.lastIndex() + 1
