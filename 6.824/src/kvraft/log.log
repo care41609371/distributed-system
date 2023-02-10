@@ -1,0 +1,25 @@
+10:53:09.061257 [2143039896670928077] Put key:1, value:13 seq:1
+10:53:10.224160 <-apply me:2 {Op:Put Key:1 Value:13 ClientId:2143039896670928077 SequenceId:1} seq:1
+10:53:10.224421 [441080405226538670] Put key:1, value:14 seq:1
+10:53:11.295583 <-apply me:0 {Op:Put Key:1 Value:14 ClientId:441080405226538670 SequenceId:1} seq:1
+10:53:11.295678 [441080405226538670] Get key:1 seq:2
+10:53:11.296265 <-apply me:0 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:2} seq:2
+10:53:11.296352 [441080405226538670] Get success value:14
+10:53:11.296389 [3193719640042775739] Get key:1 seq:1
+10:53:11.296556 [1794777520366638156] Put key:1, value:15 seq:1
+10:53:12.296476 [441080405226538670] Get key:1 seq:3
+10:53:12.297313 <-apply me:0 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:3} seq:3
+10:53:12.297409 [441080405226538670] Get success value:14
+10:53:12.297416 [441080405226538670] Put key:1, value:16 seq:4
+10:53:12.298126 <-apply me:0 {Op:Put Key:1 Value:16 ClientId:441080405226538670 SequenceId:4} seq:4
+10:53:12.298184 [441080405226538670] Get key:1 seq:5
+10:53:12.298778 <-apply me:0 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:5} seq:5
+10:53:12.298828 [441080405226538670] Get success value:16
+10:53:12.329391 <-apply me:2 {Op:Get Key:1 Value: ClientId:441080405226538670 SequenceId:2} seq:2
+10:53:12.329476 [3193719640042775739] Get success value:14
+10:53:12.350326 <-apply me:0 {Op:Put Key:1 Value:15 ClientId:1794777520366638156 SequenceId:1} seq:1
+10:53:13.299004 [2143039896670928077] Get key:1 seq:2
+10:53:13.299779 <-apply me:0 {Op:Get Key:1 Value: ClientId:2143039896670928077 SequenceId:2} seq:2
+10:53:13.299832 [2143039896670928077] Get success value:15
+
+Success

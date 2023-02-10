@@ -16,7 +16,6 @@ func (rf *Raft) setElectionTimeL() {
 }
 
 func (rf *Raft) becomeFollowerL(term int) {
-    DPrintf("%v become leader\n", rf.me)
     rf.state = FOLLOWER
     rf.currentTerm = term
     rf.votedFor = -1
@@ -24,6 +23,7 @@ func (rf *Raft) becomeFollowerL(term int) {
 }
 
 func (rf *Raft) becomeLeaderL() {
+    DPrintf("%v become leader\n", rf.me)
     rf.state = LEADER
     for i := 0; i < len(rf.nextIndex); i++ {
         rf.nextIndex[i] = rf.log.lastIndex() + 1

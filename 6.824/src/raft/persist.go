@@ -24,6 +24,14 @@ func (rf *Raft) persist() {
     rf.persister.SaveRaftState(rf.persistedState())
 }
 
+func (rf *Raft) ReadSnapshot() []byte {
+    return rf.persister.ReadSnapshot()
+}
+
+func (rf *Raft) RaftStateSize() int {
+    return rf.persister.RaftStateSize()
+}
+
 func (rf *Raft) persistStateAndSnapshot(snapshot []byte) {
     rf.persister.SaveStateAndSnapshot(rf.persistedState(), snapshot)
 }

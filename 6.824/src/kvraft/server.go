@@ -10,6 +10,8 @@ import (
     "time"
 )
 
+const waitTime = 500 * time.Millisecond
+
 type Operation struct {
     Op         string
     Key        string
@@ -21,9 +23,8 @@ type Operation struct {
 type operationReply struct {
     err   Err
     value string
+    replyTerm int
 }
-
-var count int = 0
 
 type KVServer struct {
     mu              sync.Mutex
@@ -34,19 +35,15 @@ type KVServer struct {
     maxraftstate    int                // snapshot if log grows this big
     data            map[string]string
     operationReplys map[int]chan *operationReply
-    requestsId      map[int64]int64
+    historySeq      map[int64]int64
     id              int
 }
 
-func (kv *KVServer) saveSnapshot(index int) {
+func (kv *KVServer) saveSnapshotL(index int) {
     w := new(bytes.Buffer)
     e := labgob.NewEncoder(w)
-
-    kv.mu.Lock()
-    defer kv.mu.Unlock()
-
     e.Encode(kv.data)
-    e.Encode(kv.requestsId)
+    e.Encode(kv.historySeq)
     data := w.Bytes()
 
     kv.rf.Snapshot(index, data)
@@ -63,8 +60,7 @@ func (kv *KVServer) readSnapshot(data []byte) {
     kv.mu.Lock()
     defer kv.mu.Unlock()
 
-    if d.Decode(&kv.data) != nil ||
-        d.Decode(&kv.requestsId) != nil {
+    if d.Decode(&kv.data) != nil || d.Decode(&kv.historySeq) != nil {
 
     }
 }
@@ -78,7 +74,7 @@ func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
         SequenceId : args.SequenceId,
     }
 
-    index, _, isLeader := kv.rf.Start(op)
+    index, term, isLeader := kv.rf.Start(op)
 
     if !isLeader {
         reply.Err = ErrWrongLeader
@@ -86,20 +82,22 @@ func (kv *KVServer) Get(args *GetArgs, reply *GetReply) {
     }
 
     kv.mu.Lock()
-    replyCh := make(chan *operationReply)
-    kv.operationReplys[index] = replyCh
+    kv.operationReplys[index] = make(chan *operationReply)
+    replyCh := kv.operationReplys[index]
     kv.mu.Unlock()
 
     or := &operationReply{}
     select {
-        case or = <-replyCh:
+    case or = <-replyCh:
+        if or.replyTerm != term {
+            reply.Err = ErrWrongLeader
+        } else {
             reply.Err = or.err
             reply.Value = or.value
-        case <-time.After(100 * time.Millisecond):
-            reply.Err = ErrWrongLeader
+        }
+    case <-time.After(waitTime):
+        reply.Err = ErrWrongLeader
     }
-
-    //DPrintf("[Get     return] cli:[%v] seq:[%v]\n", args.ClientId, args.SequenceId)
 
     kv.mu.Lock()
     delete(kv.operationReplys, index)
@@ -115,7 +113,7 @@ func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
         SequenceId : args.SequenceId,
     }
 
-    index, _, isLeader := kv.rf.Start(op)
+    index, term, isLeader := kv.rf.Start(op)
 
     if !isLeader {
         reply.Err = ErrWrongLeader
@@ -123,19 +121,21 @@ func (kv *KVServer) PutAppend(args *PutAppendArgs, reply *PutAppendReply) {
     }
 
     kv.mu.Lock()
-    replyCh := make(chan *operationReply)
-    kv.operationReplys[index] = replyCh
+    kv.operationReplys[index] = make(chan *operationReply)
+    replyCh := kv.operationReplys[index]
     kv.mu.Unlock()
 
     or := &operationReply{}
     select {
-        case or = <-replyCh:
-            reply.Err = or.err
-        case <-time.After(100 * time.Millisecond):
+    case or = <-replyCh:
+        if or.replyTerm != term {
             reply.Err = ErrWrongLeader
+        } else {
+            reply.Err = or.err
+        }
+    case <-time.After(waitTime):
+        reply.Err = ErrWrongLeader
     }
-
-    //DPrintf("[PutAppend return] cli:[%v] seq:[%v]\n", args.ClientId, args.SequenceId)
 
     kv.mu.Lock()
     delete(kv.operationReplys, index)
@@ -169,31 +169,33 @@ func (kv *KVServer) process() {
         }
 
         if msg.SnapshotValid {
+            DPrintf("apply snapshot\n")
             kv.readSnapshot(msg.Snapshot)
         } else {
-            operation := msg.Command.(Operation)
+            op := msg.Command.(Operation)
 
             kv.mu.Lock()
 
-            if operation.SequenceId <= kv.requestsId[operation.ClientId] {
+            or := &operationReply{}
+            or.replyTerm = msg.CommandTerm
+            if op.SequenceId <= kv.historySeq[op.ClientId] && op.Op != "Get" {
                 kv.mu.Unlock()
+                or.err = OK
+                reply, ok := kv.operationReplys[msg.CommandIndex]
+                if ok {
+                    reply <- or
+                }
                 continue
             }
 
-            kv.mu.Unlock()
-
-            or := &operationReply{}
-            if operation.Op == "Append" {
-                //DPrintf("[Append ] cli:[%v] seq:[%v]\n", operation.ClientId, operation.SequenceId)
-                kv.data[operation.Key] += operation.Value
+            if op.Op == "Append" {
+                kv.data[op.Key] += op.Value
                 or.err = OK
-            } else if operation.Op == "Put" {
-                //DPrintf("[Put    ] cli:[%v] seq:[%v]\n", operation.ClientId, operation.SequenceId)
-                kv.data[operation.Key] = operation.Value
+            } else if op.Op == "Put" {
+                kv.data[op.Key] = op.Value
                 or.err = OK
             } else {
-                //DPrintf("[Get    ] cli:[%v] seq:[%v]\n", operation.ClientId, operation.SequenceId)
-                value, count := kv.data[operation.Key]
+                value, count := kv.data[op.Key]
 
                 if count {
                     or.err = OK
@@ -203,17 +205,21 @@ func (kv *KVServer) process() {
                 }
             }
 
-            kv.mu.Lock()
-            kv.requestsId[operation.ClientId] = operation.SequenceId
+            if op.SequenceId > kv.historySeq[op.ClientId] {
+                kv.historySeq[op.ClientId] = op.SequenceId
+            }
+
             reply, ok := kv.operationReplys[msg.CommandIndex]
 
-            if kv.maxraftstate > -1 && kv.rf.RaftStateSize() > kv.maxraftstate {
-                go kv.saveSnapshot(msg.CommandIndex)
+            if kv.maxraftstate > -1 && kv.rf.RaftStateSize() >= kv.maxraftstate {
+                DPrintf("cut\n")
+                kv.saveSnapshotL(msg.CommandIndex)
             }
 
             kv.mu.Unlock()
 
             if ok {
+                //DPrintf("<-apply me:%v %+v seq:%v\n", kv.id, op, kv.historySeq[op.ClientId])
                 reply <- or
             }
         }
@@ -246,9 +252,9 @@ func StartKVServer(servers []*labrpc.ClientEnd, me int, persister *raft.Persiste
     kv.rf = raft.Make(servers, me, persister, kv.applyCh)
     kv.data = make(map[string]string)
     kv.operationReplys = make(map[int]chan *operationReply)
-    kv.requestsId = make(map[int64]int64)
-    kv.id = count
-    count++
+    kv.historySeq = make(map[int64]int64)
+
+    kv.readSnapshot(kv.rf.ReadSnapshot())
 
     go kv.process()
 

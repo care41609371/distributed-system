@@ -67,7 +67,6 @@ func (rf *Raft) AppendEntries(args *AppendEntriesArgs, reply *AppendEntriesReply
 
     if len(args.Entries) > 0 {
         rf.log.append(args.PrevLogIndex, args.Entries...)
-        DPrintf("[entry] %v %v", rf.me, rf.log.lastIndex())
         rf.persist()
     }
 
@@ -245,9 +244,8 @@ func (rf *Raft) applier() {
                 CommandValid : true,
                 Command : rf.log.at(rf.lastApplied).Command,
                 CommandIndex : rf.lastApplied,
+                CommandTerm : rf.log.at(rf.lastApplied).Term,
             }
-
-            DPrintf("[apply command] %v index:%v\n", rf.me, rf.lastApplied)
 
             rf.mu.Unlock()
             rf.applyCh <- am
@@ -261,8 +259,6 @@ func (rf *Raft) applier() {
                 SnapshotIndex : rf.waitingSnapshotIndex,
             }
             rf.waitingSnapshot = nil
-
-            DPrintf("[apply snapshot] %v index:%v\n", rf.me, am.SnapshotIndex)
 
             rf.mu.Unlock()
             rf.applyCh <- am

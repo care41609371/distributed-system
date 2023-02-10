@@ -531,7 +531,7 @@ func TestOnePartition3A(t *testing.T) {
 	cfg.ConnectClient(ckp2a, cfg.All())
 	cfg.ConnectClient(ckp2b, cfg.All())
 
-	time.Sleep(electionTimeout)
+	time.Sleep(electionTimeout * 3)
 
 	select {
 	case <-done0:

@@ -1,0 +1,31 @@
+10:50:06.553248 [3697631458360513487] Put key:1, value:13 seq:1
+10:50:07.706733 <-apply me:0 {Op:Put Key:1 Value:13 ClientId:3697631458360513487 SequenceId:1} seq:1
+10:50:07.706924 [3981068683996870463] Put key:1, value:14 seq:1
+10:50:08.865703 <-apply me:1 {Op:Put Key:1 Value:14 ClientId:3981068683996870463 SequenceId:1} seq:1
+10:50:08.865796 [3981068683996870463] Get key:1 seq:2
+10:50:08.866318 <-apply me:1 {Op:Get Key:1 Value: ClientId:3981068683996870463 SequenceId:2} seq:2
+10:50:08.866424 [3981068683996870463] Get success value:14
+10:50:08.866475 [1452422398012561022] Get key:1 seq:1
+10:50:08.866487 [1408273756699786999] Put key:1, value:15 seq:1
+10:50:09.866552 [3981068683996870463] Get key:1 seq:3
+10:50:09.867202 <-apply me:1 {Op:Get Key:1 Value: ClientId:3981068683996870463 SequenceId:3} seq:3
+10:50:09.867291 [3981068683996870463] Get success value:14
+10:50:09.867297 [3981068683996870463] Put key:1, value:16 seq:4
+10:50:09.867771 <-apply me:1 {Op:Put Key:1 Value:16 ClientId:3981068683996870463 SequenceId:4} seq:4
+10:50:09.867828 [3981068683996870463] Get key:1 seq:5
+10:50:09.868296 <-apply me:1 {Op:Get Key:1 Value: ClientId:3981068683996870463 SequenceId:5} seq:5
+10:50:09.868357 [3981068683996870463] Get success value:16
+10:50:09.910132 <-apply me:0 {Op:Put Key:1 Value:14 ClientId:3981068683996870463 SequenceId:1} seq:1
+10:50:09.910160 <-apply me:0 {Op:Get Key:1 Value: ClientId:3981068683996870463 SequenceId:2} seq:2
+10:50:09.910264 [1452422398012561022] Get success value:
+10:50:10.868511 [3697631458360513487] Get key:1 seq:2
+10:50:10.869323 <-apply me:1 {Op:Get Key:1 Value: ClientId:3697631458360513487 SequenceId:2} seq:2
+10:50:10.869380 [3697631458360513487] Get success value:16
+--- FAIL: TestOnePartition3A (4.32s)
+    test_test.go:100: Get(1): expected:
+        15
+        received:
+        16
+FAIL
+exit status 1
+FAIL	6.824/kvraft	4.319s

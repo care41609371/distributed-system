@@ -2,7 +2,7 @@ package kvraft
 
 import "log"
 
-const Debug = false
+const Debug = true
 
 func DPrintf(format string, a ...interface{}) (n, int, err error) {
     if Debug {
@@ -10,18 +10,4 @@ func DPrintf(format string, a ...interface{}) (n, int, err error) {
         log.Printf(format, a...)
     }
     return
-}
-
-func max(a, b int) int {
-    if a > b {
-        return a
-    }
-    return b
-}
-
-func min(a, b int) int {
-    if a < b {
-        return a
-    }
-    return b
 }

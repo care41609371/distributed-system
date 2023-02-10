@@ -51,25 +51,19 @@ func (ck *Clerk) Get(key string) string {
         SequenceId : ck.sequenceId,
     }
 
-    //DPrintf("Get key [%v]\n", args.Key)
+    //DPrintf("[%v] Get key:%v seq:%v\n", ck.id, args.Key, args.SequenceId)
 
     for {
         reply := GetReply{}
         ok := ck.servers[ck.leaderId].Call("KVServer.Get", &args, &reply)
 
-        if ok {
-            if reply.Err == OK {
-                //DPrintf("Get key:[%v], value:[%v]\n", key, reply.Value)
-                return reply.Value
-            } else if reply.Err == ErrNoKey {
-                //DPrintf("Get ErrNoKey\n")
-                return ""
-            } else {
-                DPrintf("ErrWrongLeader\n")
-                ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
-            }
+        if ok && reply.Err == OK {
+            //DPrintf("[%v] Get success value:%v\n", ck.id, reply.Value)
+            return reply.Value
+        } else if ok && reply.Err == ErrNoKey {
+            return ""
         } else {
-            DPrintf("Timeout\n")
+            ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
         }
     }
 }
@@ -95,23 +89,16 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
         SequenceId : ck.sequenceId,
     }
 
-    //DPrintf("[%v] key:[%v], value:[%v]\n", op, key, value)
+    //DPrintf("[%v] %v key:%v, value:%v seq:%v\n", ck.id, op, key, value, args.SequenceId)
+    //defer DPrintf("[%v] success\n", ck.id)
 
     for {
         reply := PutAppendReply{}
         ok := ck.servers[ck.leaderId].Call("KVServer.PutAppend", &args, &reply)
-
-        if ok {
-            if reply.Err == ErrWrongLeader {
-                DPrintf("ErrWrongLeader")
-                ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
-            } else {
-                //DPrintf("PutAppend success\n")
-                break
-            }
-        } else {
-            DPrintf("Timeout\n")
+        if ok && reply.Err == OK {
+            break
         }
+        ck.leaderId = (ck.leaderId + 1) % len(ck.servers)
     }
 }
 
