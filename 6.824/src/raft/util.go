@@ -6,10 +6,10 @@ import "log"
 const Debugging = false
 
 func DPrintf(format string, a ...interface{}) {
-	if Debugging {
+    if Debugging {
         log.SetFlags(log.Lmicroseconds)
-		log.Printf(format, a...)
-	}
+        log.Printf(format, a...)
+    }
 }
 
 func max(a, b int) int {

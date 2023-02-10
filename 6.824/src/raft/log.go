@@ -42,7 +42,7 @@ func (l *logEntry) rebuild(snapshotIndex, snapshotTerm int) {
 
 func (l *logEntry) at(index int) *Entry {
     if index > l.LastIncludedIndex && index <= l.lastIndex() {
-       return &l.Entries[index - l.LastIncludedIndex - 1]
+        return &l.Entries[index - l.LastIncludedIndex - 1]
     } else if index == l.LastIncludedIndex {
         return &Entry{l.LastIncludedTerm, nil}
     } else {

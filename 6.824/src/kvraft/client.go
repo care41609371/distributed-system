@@ -7,7 +7,7 @@ import (
 )
 
 type Clerk struct {
-	servers    []*labrpc.ClientEnd
+    servers    []*labrpc.ClientEnd
     leaderId   int
     id         int64
     sequenceId int64
@@ -21,13 +21,13 @@ func nrand() int64 {
 }
 
 func MakeClerk(servers []*labrpc.ClientEnd) *Clerk {
-	ck := new(Clerk)
-	ck.servers = servers
+    ck := new(Clerk)
+    ck.servers = servers
     ck.leaderId = 0
     ck.id = nrand()
     ck.sequenceId = 0
 
-	return ck
+    return ck
 }
 
 //
@@ -103,9 +103,9 @@ func (ck *Clerk) PutAppend(key string, value string, op string) {
 }
 
 func (ck *Clerk) Put(key string, value string) {
-	ck.PutAppend(key, value, "Put")
+    ck.PutAppend(key, value, "Put")
 }
 
 func (ck *Clerk) Append(key string, value string) {
-	ck.PutAppend(key, value, "Append")
+    ck.PutAppend(key, value, "Append")
 }

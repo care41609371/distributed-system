@@ -49,8 +49,8 @@ func (rf *Raft) readPersist(data []byte) {
     var currentTerm, votedFor int
     var log logEntry
     if d.Decode(&currentTerm) != nil ||
-        d.Decode(&votedFor) != nil ||
-        d.Decode(&log) != nil {
+    d.Decode(&votedFor) != nil ||
+    d.Decode(&log) != nil {
         // error...
     } else {
         rf.currentTerm = currentTerm

@@ -170,7 +170,7 @@ func (kv *KVServer) process() {
 
         if msg.SnapshotValid {
             if (kv.rf.CondInstallSnapshot(msg.SnapshotTerm, msg.SnapshotIndex, msg.Snapshot)) {
-               kv.readSnapshot(msg.Snapshot)
+                kv.readSnapshot(msg.Snapshot)
             }
         } else {
             op := msg.Command.(Operation)
